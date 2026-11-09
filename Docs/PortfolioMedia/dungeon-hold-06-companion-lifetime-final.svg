@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="640" viewBox="0 0 1800 640"><rect width="1800" height="640" fill="white"/>
+<text x="35" y="39" text-anchor="start" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="31" font-weight="700" fill="#243347">CompanionHireController.cs</text>
+<text x="471.953125" y="39" text-anchor="start" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="26" font-weight="400" fill="#5d6c7e">· 고용 요청·객체 생성·재고용 조율</text>
+<polyline points="35,80 1765,80" fill="none" stroke="#dce3eb" stroke-width="1" stroke-linejoin="round"/>
+<rect x="35" y="125" width="360" height="145" rx="9" fill="#f7f9fb" stroke="#d7e0e9"/>
+<text x="215.0" y="179.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">고용 기록 생성</text>
+<text x="215.0" y="215.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">CompanionHireEntry.cs</text>
+<rect x="740" y="125" width="330" height="145" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="905.0" y="145.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">동료 생성·참여</text>
+<text x="905.0" y="181.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">Companion.cs</text>
+<text x="905.0" y="217.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">PrepareHire()</text>
+<text x="905.0" y="251.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">ConfirmHire()</text>
+<rect x="1410" y="125" width="355" height="145" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="1587.5" y="162.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">사망 상태</text>
+<text x="1587.5" y="198.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">CompanionHireEntry.cs</text>
+<text x="1587.5" y="234.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">SetDying()</text>
+<rect x="1410" y="440" width="355" height="125" rx="9" fill="#edf5f1" stroke="#d7e0e9"/>
+<text x="1587.5" y="467.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">재고용 가능</text>
+<text x="1587.5" y="503.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">CompanionHireEntry.cs</text>
+<text x="1587.5" y="539.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">SetReady()</text>
+<polyline points="395,198 740,198" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="740,198 729.0429327162523,202.89312543671485 729.0429327162523,193.10687456328515" fill="#526579"/>
+<rect x="413.01171875" y="177.5" width="309.9765625" height="41" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="568" y="198.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="22" font-weight="700" fill="#243347">TryPlace() / BeginCombat()</text>
+<polyline points="1070,198 1410,198" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1410,198 1399.0429327162524,202.89312543671485 1399.0429327162524,193.10687456328515" fill="#526579"/>
+<rect x="1093.00390625" y="177.0" width="293.9921875" height="42" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="1240" y="198.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">HandleCompanionDied()</text>
+<polyline points="1587,270 1587,440" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1587,440 1582.1068745632851,429.0429327162523 1591.8931254367149,429.0429327162523" fill="#526579"/>
+<rect x="1426.75" y="321.0" width="320.5" height="68" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="1587" y="341.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="21" font-weight="700" fill="#243347">CompleteDeathPresentation()</text>
+<text x="1587" y="369.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="21" font-weight="700" fill="#243347">사망 연출·남은 대기 완료</text>
+<polyline points="1410,503 905,503 905,270" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="905,270 909.8931254367149,280.9570672837477 900.1068745632851,280.9570672837477" fill="#526579"/>
+<rect x="1082.26171875" y="481.0" width="155.4765625" height="44" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="1160" y="503.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="25" font-weight="700" fill="#243347">TryRehire()</text>
+<text x="35" y="350" text-anchor="start" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="700" fill="#243347">TryHire()로 비용 지불·고용 기록 생성</text>
+<text x="35" y="395" text-anchor="start" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">사망 시 타입 공통 대기 시작</text>
+<text x="35" y="600" text-anchor="start" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="25" font-weight="400" fill="#243347">재고용은 같은 번호·순번의 기록을 사용하며, 추종형 동료를 다시 생성합니다.</text>
+</svg>

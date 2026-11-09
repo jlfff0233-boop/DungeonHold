@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="650" viewBox="0 0 1800 650"><rect width="1800" height="650" fill="white"/>
+<text x="35" y="39" text-anchor="start" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="31" font-weight="700" fill="#243347">PlayScene.Init()</text>
+<text x="283.0" y="39" text-anchor="start" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="26" font-weight="400" fill="#5d6c7e">· 공유 진행으로 모듈 초기화·연결</text>
+<polyline points="35,80 1765,80" fill="none" stroke="#dce3eb" stroke-width="1" stroke-linejoin="round"/>
+<rect x="35" y="235" width="340" height="165" rx="9" fill="#f7f9fb" stroke="#d7e0e9"/>
+<text x="205.0" y="265.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">씬 API</text>
+<text x="205.0" y="301.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">PlayScene.cs</text>
+<text x="205.0" y="337.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">BeginStage()</text>
+<text x="205.0" y="371.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">CompleteEndEvents()</text>
+<rect x="680" y="235" width="345" height="165" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="852.5" y="282.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">도전 조율</text>
+<text x="852.5" y="318.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">PlaySession.cs</text>
+<text x="852.5" y="354.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">ProcessPendingEnd()</text>
+<rect x="1350" y="105" width="415" height="160" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="1557.5" y="149.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="28" font-weight="700" fill="#243347">플레이어·동료</text>
+<text x="1557.5" y="185.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">Hero.cs</text>
+<text x="1557.5" y="221.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">CompanionHireController.cs</text>
+<rect x="1350" y="400" width="415" height="170" rx="9" fill="#edf5f1" stroke="#d7e0e9"/>
+<text x="1557.5" y="449.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="27" font-weight="700" fill="#243347">종료 정산·진행 저장</text>
+<text x="1557.5" y="485.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">MissionController.cs</text>
+<text x="1557.5" y="521.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">SaveService.cs</text>
+<polyline points="375,318 680,318" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="680,318 669.0429327162523,322.89312543671485 669.0429327162523,313.10687456328515" fill="#526579"/>
+<rect x="416.0" y="297.0" width="224.0" height="42" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="528" y="318.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">동일 세션으로 전달</text>
+<polyline points="1025,270 1150,270 1150,185 1350,185" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1350,185 1339.0429327162524,189.89312543671485 1339.0429327162524,180.10687456328515" fill="#526579"/>
+<rect x="1069.00390625" y="149.0" width="241.9921875" height="72" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="1190" y="170.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">Init() / BeginStage()</text>
+<text x="1190" y="200.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">BeginCombat()</text>
+<polyline points="1025,370 1150,370 1150,485 1350,485" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1350,485 1339.0429327162524,489.89312543671485 1339.0429327162524,480.10687456328515" fill="#526579"/>
+<rect x="1073.26171875" y="450.0" width="233.4765625" height="70" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="1190" y="470.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="22" font-weight="700" fill="#243347">TryFinalizeStage()</text>
+<text x="1190" y="499.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="22" font-weight="700" fill="#243347">TrySaveStageClear()</text>
+<polyline points="35,605 1765,605" fill="none" stroke="#dce3eb" stroke-width="1" stroke-linejoin="round"/>
+<text x="35" y="630" text-anchor="start" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">공통 기반 · GameManager.cs — 저장 / 설정 / 사운드 / VFX / SceneFlow</text>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1820" height="500" viewBox="0 0 1820 500"><rect width="1820" height="500" fill="white"/>
+<rect x="35" y="65" width="300" height="150" rx="9" fill="#f7f9fb" stroke="#d7e0e9"/>
+<text x="185.0" y="105.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">로비 준비</text>
+<text x="185.0" y="141.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">LobbyController.cs</text>
+<text x="185.0" y="177.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">TryPrepareEntry()</text>
+<rect x="510" y="65" width="300" height="150" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="660.0" y="105.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">입장·도전 준비</text>
+<text x="660.0" y="141.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">SceneFlow.cs</text>
+<text x="660.0" y="177.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">TryEnterStage()</text>
+<rect x="1020" y="65" width="300" height="150" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="1170.0" y="105.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">웨이브 전투</text>
+<text x="1170.0" y="141.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">PlaySession.cs</text>
+<text x="1170.0" y="177.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">BeginCombat()</text>
+<rect x="1485" y="65" width="300" height="150" rx="9" fill="#edf5f1" stroke="#d7e0e9"/>
+<text x="1635.0" y="105.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">결과 정산·저장</text>
+<text x="1635.0" y="141.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">PlaySession.cs</text>
+<text x="1635.0" y="177.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">ProcessPendingEnd()</text>
+<rect x="1020" y="335" width="300" height="100" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="1170.0" y="367.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">배치·재정비</text>
+<text x="1170.0" y="403.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">PlaySession.cs</text>
+<polyline points="335,140 510,140" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="510,140 499.0429327162523,144.89312543671485 499.0429327162523,135.10687456328515" fill="#526579"/>
+<polyline points="810,140 1020,140" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1020,140 1009.0429327162523,144.89312543671485 1009.0429327162523,135.10687456328515" fill="#526579"/>
+<polyline points="1320,140 1485,140" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1485,140 1474.0429327162524,144.89312543671485 1474.0429327162524,135.10687456328515" fill="#526579"/>
+<polyline points="1170,215 1170,335" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1170,335 1165.1068745632851,324.0429327162523 1174.8931254367149,324.0429327162523" fill="#526579"/>
+<polyline points="1170,335 1170,215" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1170,215 1174.8931254367149,225.9570672837477 1165.1068745632851,225.9570672837477" fill="#526579"/>
+<rect x="1074.75" y="253.5" width="190.5" height="43" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="1170" y="275.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="700" fill="#243347">SetPlayPhase()</text>
+<rect x="833.25390625" y="119.0" width="163.4921875" height="42" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="915" y="140.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">BeginStage()</text>
+<text x="1403" y="110" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="22" font-weight="700" fill="#243347">승패 확정</text>
+<text x="1170" y="470" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">첫 전투 이후에는 준비·전투 구간 전환</text>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="600" viewBox="0 0 1800 600"><rect width="1800" height="600" fill="white"/>
+<rect x="35" y="225" width="415" height="165" rx="9" fill="#f7f9fb" stroke="#d7e0e9"/>
+<text x="242.5" y="272.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">서버 백업 불러오기</text>
+<text x="242.5" y="308.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">ProgressBackupService.cs</text>
+<text x="242.5" y="344.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">RestoreProgressAsync()</text>
+<rect x="730" y="225" width="360" height="165" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="910.0" y="272.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">복원 후보 검사</text>
+<text x="910.0" y="308.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">SaveService.cs</text>
+<text x="910.0" y="344.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">TryRestoreBackup()</text>
+<rect x="1365" y="65" width="400" height="170" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="1565.0" y="98.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">원본 보관·파일 저장</text>
+<text x="1565.0" y="134.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">JsonSaveStorage.cs</text>
+<text x="1565.0" y="170.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">TryPreserveBeforeRestore()</text>
+<text x="1565.0" y="204.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">TrySave()</text>
+<rect x="1365" y="395" width="400" height="120" rx="9" fill="#edf5f1" stroke="#d7e0e9"/>
+<text x="1565.0" y="437.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="25" font-weight="700" fill="#243347">게임에서 사용할 진행 확정</text>
+<text x="1565.0" y="473.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">SaveService.cs</text>
+<polyline points="450,308 730,308" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="730,308 719.0429327162523,312.89312543671485 719.0429327162523,303.10687456328515" fill="#526579"/>
+<rect x="471.26171875" y="287.0" width="237.4765625" height="42" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="590" y="308.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">TryRestoreBackup()</text>
+<polyline points="1090,280 1220,280 1220,150 1365,150" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1365,150 1354.0429327162524,154.89312543671485 1354.0429327162524,145.10687456328515" fill="#526579"/>
+<rect x="1095.0" y="129.0" width="230.0" height="42" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="1210" y="150.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">검사·설정 호환 확인</text>
+<polyline points="1565,235 1565,395" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1565,395 1560.1068745632851,384.0429327162523 1569.8931254367149,384.0429327162523" fill="#526579"/>
+<rect x="1500.75" y="293.5" width="128.5" height="43" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="1565" y="315.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="700" fill="#243347">저장 성공</text>
+<text x="35" y="545" text-anchor="start" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="25" font-weight="700" fill="#243347">검사·원본 보관·파일 저장 실패 시 기존 게임 진행 유지</text>
+</svg>

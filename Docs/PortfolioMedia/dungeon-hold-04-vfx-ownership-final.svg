@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="490" viewBox="0 0 1800 490"><rect width="1800" height="490" fill="white"/>
+<rect x="35" y="45" width="390" height="145" rx="9" fill="#f7f9fb" stroke="#d7e0e9"/>
+<text x="230.0" y="82.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">캐릭터 효과</text>
+<text x="230.0" y="118.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">CharacterVfx.cs</text>
+<text x="230.0" y="154.5" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">PlayHit() / RefreshEffects()</text>
+<rect x="35" y="300" width="390" height="140" rx="9" fill="#f7f9fb" stroke="#d7e0e9"/>
+<text x="230.0" y="335.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">투사체 효과</text>
+<text x="230.0" y="371.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">Projectile.cs</text>
+<text x="230.0" y="407.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">Init()</text>
+<rect x="820" y="170" width="350" height="150" rx="9" fill="#eff4fa" stroke="#d7e0e9"/>
+<text x="995.0" y="210.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">공용 재생·수명 관리</text>
+<text x="995.0" y="246.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">VfxManager.cs</text>
+<text x="995.0" y="282.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">LateUpdate()</text>
+<rect x="1440" y="170" width="325" height="150" rx="9" fill="#edf5f1" stroke="#d7e0e9"/>
+<text x="1602.5" y="210.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="29" font-weight="700" fill="#243347">재생 중인 효과</text>
+<text x="1602.5" y="246.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="400" fill="#243347">VfxEffect.cs</text>
+<text x="1602.5" y="282.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="23" font-weight="700" fill="#243347">UpdateEffect()</text>
+<polyline points="425,118 640,118 640,225 820,225" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="820,225 809.0429327162523,229.89312543671485 809.0429327162523,220.10687456328515" fill="#526579"/>
+<polyline points="425,370 640,370 640,265 820,265" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="820,265 809.0429327162523,269.89312543671485 809.0429327162523,260.10687456328515" fill="#526579"/>
+<polyline points="1170,245 1440,245" fill="none" stroke="#526579" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="1440,245 1429.0429327162524,249.89312543671485 1429.0429327162524,240.10687456328515" fill="#526579"/>
+<rect x="516.75" y="96.0" width="216.5" height="44" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="625" y="118.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="25" font-weight="700" fill="#243347">Play() / Follow()</text>
+<rect x="470.25390625" y="348.5" width="309.4921875" height="43" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="625" y="370.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="24" font-weight="700" fill="#243347">PlayAttached() / Follow()</text>
+<rect x="1212.25" y="223.0" width="185.5" height="44" rx="4" fill="#fff8dc" stroke="#e4d4a5"/>
+<text x="1305" y="245.0" text-anchor="middle" dominant-baseline="central" font-family="Malgun Gothic, sans-serif" font-size="25" font-weight="700" fill="#243347">CreateEffect()</text>
+</svg>
