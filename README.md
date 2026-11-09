@@ -12,6 +12,8 @@
 - **참여 인원**: 5명
 - **개발 상태**: 실제 맵·UI 연결과 전투 표현 보완 진행 중
 
+이 저장소는 5인 팀 프로젝트 Dungeon Hold의 포트폴리오 공개용입니다. 에셋 공개 범위에 맞춰 별도로 구성했으며, 원본 개발 이력은 팀 저장소에서 관리했습니다.
+
 ![콤보 처치 표시와 스킬·궁극기 준비 상태, 동료 2명과 소모품 보유 상태가 함께 보이는 Stage1 전투 화면](Docs/PortfolioMedia/dungeon-hold-stage1-hud-rich.png)
 
 콤보 처치 표시와 스킬·궁극기 준비 상태, 동료 2명과 소모품 보유 상태가 함께 보이는 Stage1 전투 화면
@@ -41,8 +43,6 @@
 [플레이 영상 열기 (MP4)](Docs/PortfolioMedia/dungeon-hold-play.mp4)
 
 동료 배치 → 웨이브 시작 → 기본 공격·스킬·궁극기 사용 · 약 35초 · 게임 사운드 포함
-
-[**\[GitHub 저장소\]**](https://github.com/jlfff0233-boop/DungeonHold)
 
 ---
 
