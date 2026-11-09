@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6247ba2b49a992c42a48036db90ba47d, type: 3}
+  m_Name: StageSelectionData
+  m_EditorClassIdentifier: 
+  _stages:
+  - _mapId: stage_1
+    _displayName: "\uC131\uCC44 \uC9C4\uC785\uB85C"
+    _description: "\uC881\uC740 \uB2E8\uC77C \uD1B5\uB85C\uB85C \uC9C4\uC785\uD558\uB294
+      \uC801\uC744 \uB9C9\uACE0 \uD1B5\uACFC \uD55C\uB3C4\uB97C \uC9C0\uD0A4\uC138\uC694."
+    _preview: {fileID: 0}
+    _difficulties: 000000000100000002000000
+  - _mapId: stage_2
+    _displayName: "\uBD84\uAE30\uD615 \uC9C0\uD558 \uD68C\uB791"
+    _description: "\uB450 \uACBD\uB85C\uC5D0\uC11C \uD569\uB958\uD558\uB294 \uC801\uC744
+      \uB9C9\uACE0 \uBC29\uC5B4 \uBAA9\uD45C\uB97C \uC9C0\uD0A4\uC138\uC694."
+    _preview: {fileID: 0}
+    _difficulties: 000000000100000002000000
+  - _mapId: stage_3
+    _displayName: "\uCD5C\uD6C4\uC758 \uC694\uC0C8"
+    _description: "\uB450 \uC9C4\uC785\uB85C\uC758 \uC801\uC744 \uB9C9\uC73C\uC138\uC694.
+      \uC801 \uD1B5\uACFC \uD55C\uB3C4\uC5D0 \uB3C4\uB2EC\uD558\uAC70\uB098 \uBC29\uC5B4
+      \uBAA9\uD45C\uAC00 \uD30C\uAD34\uB418\uBA74 \uC2E4\uD328\uD569\uB2C8\uB2E4."
+    _preview: {fileID: 0}
+    _difficulties: 000000000100000002000000

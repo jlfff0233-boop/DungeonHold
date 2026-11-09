@@ -1,0 +1,4 @@
+MapId,DisplayName,Description,Difficulties
+stage_1,성채 진입로,좁은 단일 통로로 진입하는 적을 막고 통과 한도를 지키세요.,Easy|Normal|Hard
+stage_2,분기형 지하 회랑,두 경로에서 합류하는 적을 막고 방어 목표를 지키세요.,Easy|Normal|Hard
+stage_3,최후의 요새,두 진입로의 적을 막으세요. 적 통과 한도에 도달하거나 방어 목표가 파괴되면 실패합니다.,Easy|Normal|Hard

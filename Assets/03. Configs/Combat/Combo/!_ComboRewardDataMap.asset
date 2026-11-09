@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d43d6e6ec58c2eb419330065a1ab298a, type: 3}
+  m_Name: '!_ComboRewardDataMap'
+  m_EditorClassIdentifier: 
+  _rewards:
+  - {fileID: 11400000, guid: bbab1262c6c571b41a35433343e5ea53, type: 2}
+  - {fileID: 11400000, guid: ac21a85f0b3409a4d8211f507f51a39e, type: 2}
+  - {fileID: 11400000, guid: 364e3196300c5214ab7c3afd878ca7a9, type: 2}

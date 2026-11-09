@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86ce5079a43eecd4b8784b1ec3fecc91, type: 3}
+  m_Name: Upgrade_6_StaffDamage
+  m_EditorClassIdentifier: 
+  _upgradeId: Upgrade_6_StaffDamage
+  _weaponType: 2
+  _levels:
+  - _price: 20
+    _damageBonus: 0.2
+  - _price: 30
+    _damageBonus: 0.4
+  - _price: 40
+    _damageBonus: 0.6

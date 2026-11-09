@@ -1,0 +1,4 @@
+WeaponType,MaxHp,DamageReductionRate,RawDamage,AttackInterval,AttackRadius,AttackAngle,MoveSpeed,RotationSpeed,FollowDistance,ArrivalDistance,ActivityRadius,AttackRange,DetectionMargin,DefendRadius,SearchInterval,CanRetreat,RetreatStartDistance,RetreatDistance,RetreatCandidateCount,RetreatSampleDistance,HireCost,RehireDelay
+Sword,150,0,20,1,2.5,120,10,540,2,0.15,15,2,2,5,0.3,false,0,0,0,0,150,5
+Bow,80,0,25,1.5,2.5,120,10,540,2,0.15,15,7,2,5,0.3,true,4,7,8,1,200,5
+Staff,90,0,18,0.8,2.5,120,10,540,2,0.15,12,9,2,5,0.3,true,4,7,8,1,250,5

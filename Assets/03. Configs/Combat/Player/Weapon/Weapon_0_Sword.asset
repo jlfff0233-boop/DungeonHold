@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e292abaf09d68444eaeae4721bb33154, type: 3}
+  m_Name: Weapon_0_Sword
+  m_EditorClassIdentifier: 
+  _weaponType: 0
+  _combatStatsData: {fileID: 11400000, guid: 0ca77b0b42c921849b1209576248c639, type: 2}
+  _attackData: {fileID: 11400000, guid: 4c88d0735d032be47a24250225710797, type: 2}
+  _skillData: {fileID: 11400000, guid: 9b78b7191c4fe464aa2e8d34053cd633, type: 2}
+  _ultimateData: {fileID: 11400000, guid: 2b43af41c7292a241882a3905623e2bc, type: 2}
+  _moveSpeed: 5
+  _useAimRotation: 0
+  _animatorOverrideController: {fileID: 22100000, guid: 450ab1d837ed1b64dad9b62acc9b2a34, type: 2}
+  _useUpperStance: 1

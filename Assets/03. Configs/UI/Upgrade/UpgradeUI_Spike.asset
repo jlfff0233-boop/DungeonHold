@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc40f9c0fcd67fe4899a917ed7fc70fd, type: 3}
+  m_Name: UpgradeUI_Spike
+  m_EditorClassIdentifier: 
+  NameText: "\uAC00\uC2DC \uD568\uC815"
+  TypeText: 
+  DescriptionText: "\uAC00\uC2DC\uD568\uC815\uC758 \uB2A5\uB825\uCE58\uB97C \uAC15\uD654\uD569\uB2C8\uB2E4."
+  Artwork: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  FirstCard:
+    Upgrade: {fileID: 11400000, guid: 54867b0267da4cb4c885ae924390955c, type: 2}
+    EffectText: "\uB300\uBBF8\uC9C0\uAC00 \uC99D\uAC00\uD569\uB2C8\uB2E4."
+  SecondCard:
+    Upgrade: {fileID: 11400000, guid: 72fc3cca52e25444981fc4580b685d4e, type: 2}
+    EffectText: "\uACF5\uACA9\uC744 \uB354 \uC790\uC8FC\uD569\uB2C8\uB2E4."

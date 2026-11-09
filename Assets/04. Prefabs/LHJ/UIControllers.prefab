@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3440058452146011673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7890160789028142241}
+  - component: {fileID: 5302396936575534134}
+  - component: {fileID: 720224400000000001}
+  - component: {fileID: 720224500000000001}
+  m_Layer: 0
+  m_Name: UIControllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7890160789028142241
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440058452146011673}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5302396936575534134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440058452146011673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac65642fdbc308d4e99e035ad74e8da4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pauseMenuRoot: {fileID: 0}
+  _optionsRoot: {fileID: 0}
+  _helpRoot: {fileID: 0}
+  _dimRoot: {fileID: 0}
+  _resumeButton: {fileID: 0}
+  _optionsFirstSelected: {fileID: 0}
+  _helpFirstSelected: {fileID: 0}
+  _playerTestScene: {fileID: 0}
+  _inputBehaviours:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _freezeTime: 1
+--- !u!114 &720224400000000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440058452146011673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a5965cb948e44cca9bfec4d8e7dc857, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+--- !u!114 &720224500000000001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3440058452146011673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6379c09aa9148209ac33df8f80cb4a8, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  _enemyHealthPrefab: {fileID: 7146186546348270232, guid: 8a991b0aaf5d214478d45d5028186ee7, type: 3}
+  _font: {fileID: 11400000, guid: 141e7218b851c1647adba4593bb3fa56, type: 2}
+  _burnIcon: {fileID: 2800000, guid: 4cce611bbd3261543a54f0c011135536, type: 3}
+  _slowIcon: {fileID: 2800000, guid: cfe25aaed0d69b640994ba38efa4aca9, type: 3}
+  _stunIcon: {fileID: 2800000, guid: e1370dc5136c4d84094193d0ba80c356, type: 3}
+  _scanSeconds: 0.2

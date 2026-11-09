@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1aa14ad36a54474f896be559588b454, type: 3}
+  m_Name: Mission_7_TankKill20
+  m_EditorClassIdentifier: 
+  _missionId: Mission_7_TankKill20
+  _displayName: "\uD0F1\uCEE4\uD615 \uC801 \uB204\uC801 20\uB9C8\uB9AC \uCC98\uCE58"
+  _difficulties: 000000000100000002000000
+  _prerequisiteId: 
+  _rewardAmount: 150
+  _killCountData: {fileID: 11400000, guid: 9e4067cdb891ffc4ca2f534f71ef8e55, type: 2}
+  _targetCount: 20

@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec4a27aaab49041418be20f50cf0d76d, type: 3}
+  m_Name: ClearRewardData
+  m_EditorClassIdentifier: 
+  _baseAmount: 300
+  _failureAmount: 50
+  _hardPercent: 120
+  _maxScoreBonusPercent: 50
+  _twoStarAmount: 100
+  _threeStarAmount: 200
+  _legacyStars: 2
+  _targets:
+  - _mapId: stage_1
+    _difficulty: 0
+    _score: 4300
+  - _mapId: stage_1
+    _difficulty: 1
+    _score: 5100
+  - _mapId: stage_1
+    _difficulty: 2
+    _score: 5900
+  - _mapId: stage_2
+    _difficulty: 0
+    _score: 6800
+  - _mapId: stage_2
+    _difficulty: 1
+    _score: 8000
+  - _mapId: stage_2
+    _difficulty: 2
+    _score: 9200
+  - _mapId: stage_3
+    _difficulty: 0
+    _score: 8500
+  - _mapId: stage_3
+    _difficulty: 1
+    _score: 10100
+  - _mapId: stage_3
+    _difficulty: 2
+    _score: 11700

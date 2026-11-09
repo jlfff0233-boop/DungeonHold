@@ -1,0 +1,12 @@
+Paused=True
+ConfirmDialogRoot active=True scale=(1.00, 1.00, 1.00) position=(960.00, 540.00, 0.00) rect=(x:-800.00, y:-320.00, width:1600.00, height:640.00)
+TitleText active=True enabled=True scale=(1.00, 1.00, 1.00) pos=(960.00, 740.00, 0.00) alpha=1
+DescriptionText active=True enabled=True scale=(1.00, 1.00, 1.00) pos=(960.00, 530.00, 0.00) alpha=1
+ConfirmButton active=True enabled=True scale=(1.00, 1.00, 1.00) pos=(840.00, 330.00, 0.00) alpha=0
+Label active=True enabled=True scale=(1.00, 1.00, 1.00) pos=(840.00, 330.00, 0.00) alpha=1
+CancelButton active=True enabled=True scale=(1.00, 1.00, 1.00) pos=(1080.00, 330.00, 0.00) alpha=0
+Label active=True enabled=True scale=(1.00, 1.00, 1.00) pos=(1080.00, 330.00, 0.00) alpha=1
+Parent=Canvas_Screens active=True scale=(1.00, 1.00, 1.00)
+PauseDimmedBackground active=True scale=(1.00, 1.00, 1.00) position=(960.00, 540.00, 0.00) rect=(x:-960.00, y:-540.00, width:1920.00, height:1080.00)
+PauseDimmedBackground active=True enabled=True scale=(1.00, 1.00, 1.00) pos=(960.00, 540.00, 0.00) alpha=0.5490196
+Parent=Canvas_Screens active=True scale=(1.00, 1.00, 1.00)

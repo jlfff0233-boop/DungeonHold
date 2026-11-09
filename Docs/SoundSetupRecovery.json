@@ -1,0 +1,1133 @@
+{
+  "description": "현재 브랜치의 SoundSetupProfile 및 SoundDataMap을 대조한 음원 배정 복구 JSON",
+  "source": {
+    "branch": "feature/player-base",
+    "commit": "d696ee5505794705724a331e6e3f30b0be167972",
+    "profile": "Assets/11. Sounds/SoundSetupProfile.asset",
+    "dataMap": "Assets/11. Sounds/SoundDataMap.asset",
+    "audioFolder": "Assets/99. Assets/Sound/SelectedAudio"
+  },
+  "summary": {
+    "selectionCount": 65,
+    "registeredSelectionCount": 64,
+    "runtimeSoundIdCount": 63,
+    "reserveCount": 1
+  },
+  "usage": [
+    "수정된 툴에서 Tools > Sound Setup을 열고 미싱이 발생한 기존 설정 프로필을 선택합니다.",
+    "음원 폴더에 Assets/99. Assets/Sound/SelectedAudio를 프로젝트 창에서 직접 지정합니다. 기존 폴더 참조가 Missing이면 반드시 다시 지정합니다. 지정한 폴더와 하위 폴더에서 파일명으로 찾으며, 동명 파일이 여러 개면 수동 지정이 필요합니다.",
+    "선택 JSON 가져오기 / 미싱 음원 복구 버튼에서 이 파일을 선택합니다. 기존 선택 키의 그룹+파일명이 일치하는 행은 ID·종류·음량·적용·예비 설정을 유지하고 미싱 클립만 복구합니다.",
+    "기존 데이터 맵에 복구할 SoundDataMap을 지정하고 충돌하는 기존 값 교체 허용을 체크합니다. 프로필만 저장은 데이터 맵을 복구하지 않습니다.",
+    "현재 설정 검사 후 검사한 설정 적용 / 저장을 실행합니다. 원본 기준 런타임 맵은 63개 ID / 64개 클립 연결입니다.",
+    "프로필 행 자체가 삭제되었다면 새 행이 추가됩니다. 새 행의 ID는 soundId에서 읽고 종류는 ID별 기본값, 음량은 1로 설정됩니다. 기존 정상 클립 참조는 덮어쓰지 않습니다.",
+    "새로 추가된 RPG3_PAD_DarkLoop01.wav 행은 None / 이번 적용 해제 상태입니다. 원본 예비 BGM 설정까지 맞추려면 종류 Bgm 및 예비 후보 체크를 수동 지정합니다.",
+    "각 selections 항목의 backup은 원본 설정 참고용이며 현재 가져오기는 이를 자동 반영하지 않습니다. 프리팹/애니메이션 연결 및 실제 재생은 이 JSON의 복구 범위에 포함되지 않습니다."
+  ],
+  "selections": [
+    {
+      "group": "G01",
+      "purpose": "UI 선택·확인",
+      "soundId": "UiClick",
+      "relativePath": "ui_select_click_05.wav",
+      "backup": {
+        "selectionKey": "G01|ui_select_click_05.wav|10",
+        "clipGuid": "4d4376df89596ce4b992bc7c3003e603",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/ui_select_click_05.wav",
+        "soundType": "Ui",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G02",
+      "purpose": "UI 뒤로·취소",
+      "soundId": "UiBack",
+      "relativePath": "fnt_ui_confirm_cancel_02.wav",
+      "backup": {
+        "selectionKey": "G02|fnt_ui_confirm_cancel_02.wav|11",
+        "clipGuid": "a5a42d0981b547e4aae0b0db64fa9b0e",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/fnt_ui_confirm_cancel_02.wav",
+        "soundType": "Ui",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G03",
+      "purpose": "검 기본 휘두르기",
+      "soundId": "SwordSwing",
+      "relativePath": "blade_whoosh_01.wav",
+      "backup": {
+        "selectionKey": "G03|blade_whoosh_01.wav|100",
+        "clipGuid": "7bfbfb1430a387149b5c246d463d7610",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/blade_whoosh_01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G04",
+      "purpose": "검 전방 스킬",
+      "soundId": "SwordSkill",
+      "relativePath": "blade_whoosh_heavy_03.wav",
+      "backup": {
+        "selectionKey": "G04|blade_whoosh_heavy_03.wav|101",
+        "clipGuid": "aa3ba25e0028afb4dad3146880a5fa2d",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/blade_whoosh_heavy_03.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G05",
+      "purpose": "검 주변 궁극기",
+      "soundId": "SwordUltimate",
+      "relativePath": "medwpn2_heavy_whoosh_hit_04.wav",
+      "backup": {
+        "selectionKey": "G05|medwpn2_heavy_whoosh_hit_04.wav|102",
+        "clipGuid": "a337e38d3e893a04c9180acddaaa61e7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/medwpn2_heavy_whoosh_hit_04.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G06",
+      "purpose": "활 기본 발사·동료 궁수",
+      "soundId": "BowLaunch",
+      "relativePath": "arrow_whoosh.wav",
+      "backup": {
+        "selectionKey": "G06|arrow_whoosh.wav|110",
+        "clipGuid": "5140f4c34b8e11e469124552abc1949c",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/arrow_whoosh.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G07",
+      "purpose": "활 기본 명중",
+      "soundId": "BowImpact",
+      "relativePath": "RPG3_GenericArrow_Impact01.wav",
+      "backup": {
+        "selectionKey": "G07|RPG3_GenericArrow_Impact01.wav|111",
+        "clipGuid": "0166689c3dec326489c21a7cfc414117",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_GenericArrow_Impact01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G08",
+      "purpose": "관통 화살 발사",
+      "soundId": "BowSkillLaunch",
+      "relativePath": "RPG3_GenericArrow_Shoot01.wav",
+      "backup": {
+        "selectionKey": "G08|RPG3_GenericArrow_Shoot01.wav|112",
+        "clipGuid": "3deabcb15436fe240b6432c90b4f26e7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_GenericArrow_Shoot01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G09",
+      "purpose": "관통 화살 명중",
+      "soundId": "BowSkillImpact",
+      "relativePath": "RPG3_FireMagicArrow_Impact05_Final.wav",
+      "backup": {
+        "selectionKey": "G09|RPG3_FireMagicArrow_Impact05_Final.wav|113",
+        "clipGuid": "dfd50f206445a0242b3cd5e61161456e",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagicArrow_Impact05_Final.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G10",
+      "purpose": "화살비 생성",
+      "soundId": "BowUltimate",
+      "relativePath": "RPG3_FireMagicArrow_MutipleShot.wav",
+      "backup": {
+        "selectionKey": "G10|RPG3_FireMagicArrow_MutipleShot.wav|114",
+        "clipGuid": "9010f0d40c1917f47ab97850e6099a81",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagicArrow_MutipleShot.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G11",
+      "purpose": "화살비 주기 타격",
+      "soundId": "BowUltimateTick",
+      "relativePath": "RPG3_MagicArrow_Impact01.wav",
+      "backup": {
+        "selectionKey": "G11|RPG3_MagicArrow_Impact01.wav|210",
+        "clipGuid": "200d051be8b129d449d291ce0995643b",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_MagicArrow_Impact01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G12",
+      "purpose": "스태프 기본 발사·동료 마법사",
+      "soundId": "StaffLaunch",
+      "relativePath": "RPG3_FireMagicBall_Projectile02.wav",
+      "backup": {
+        "selectionKey": "G12|RPG3_FireMagicBall_Projectile02.wav|120",
+        "clipGuid": "cb8179e82abd80d44b03ba5a02b17d2a",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagicBall_Projectile02.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G13",
+      "purpose": "스태프 기본 폭발",
+      "soundId": "StaffImpact",
+      "relativePath": "RPG3_FireMagic_Impact02v2.wav",
+      "backup": {
+        "selectionKey": "G13|RPG3_FireMagic_Impact02v2.wav|121",
+        "clipGuid": "a6ed9e7e85dbda34989136df32644a1b",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagic_Impact02v2.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G14",
+      "purpose": "강화 마법탄 발사",
+      "soundId": "StaffSkillLaunch",
+      "relativePath": "RPG3_FireMagicBall_Projectile02.wav",
+      "backup": {
+        "selectionKey": "G14|RPG3_FireMagicBall_Projectile02.wav|122",
+        "clipGuid": "cb8179e82abd80d44b03ba5a02b17d2a",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagicBall_Projectile02.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G15",
+      "purpose": "강화 마법탄 폭발",
+      "soundId": "StaffSkillImpact",
+      "relativePath": "RPG3_FireMagicBall_HeavyImpact01.wav",
+      "backup": {
+        "selectionKey": "G15|RPG3_FireMagicBall_HeavyImpact01.wav|123",
+        "clipGuid": "344f8c1e5325e21488f096c71ca9fc8f",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagicBall_HeavyImpact01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G16",
+      "purpose": "불기둥 생성",
+      "soundId": "StaffUltimate",
+      "relativePath": "RPG3_FireMagicEpic_Impact01.wav",
+      "backup": {
+        "selectionKey": "G16|RPG3_FireMagicEpic_Impact01.wav|124",
+        "clipGuid": "46c55a4798b0744458e3fc01388bf572",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagicEpic_Impact01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G17",
+      "purpose": "불기둥 주기 타격",
+      "soundId": "StaffUltimateTick",
+      "relativePath": "RPG3_FireMagic_LightImpact01.wav",
+      "backup": {
+        "selectionKey": "G17|RPG3_FireMagic_LightImpact01.wav|211",
+        "clipGuid": "4783c8b87cf5d924a88e314ef7fc02e1",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagic_LightImpact01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G18",
+      "purpose": "점프 보조 효과",
+      "soundId": "HeroJump",
+      "relativePath": "combat_whoosh_02.wav",
+      "backup": {
+        "selectionKey": "G18|combat_whoosh_02.wav|22",
+        "clipGuid": "7944c70872050aa41810bbd0cc0d53b7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/combat_whoosh_02.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G19",
+      "purpose": "회피 구르기 보조 효과",
+      "soundId": "HeroDodge",
+      "relativePath": "RPG3_GenericMisc_AttackMissed01.wav",
+      "backup": {
+        "selectionKey": "G19|RPG3_GenericMisc_AttackMissed01.wav|23",
+        "clipGuid": "b41e6d9c5287009429541e4ca2e05bdf",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_GenericMisc_AttackMissed01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G20",
+      "purpose": "플레이어·동료 피격 효과",
+      "soundId": "HeroHurt",
+      "relativePath": "RPG3_GenericPunch_Impact01.wav",
+      "backup": {
+        "selectionKey": "G20|RPG3_GenericPunch_Impact01.wav|24",
+        "clipGuid": "f5d10d096b7810c4e81e7ec4a5959f16",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_GenericPunch_Impact01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G20",
+      "purpose": "플레이어·동료 피격 효과",
+      "soundId": "CompanionHurt",
+      "relativePath": "RPG3_GenericPunch_Impact01.wav",
+      "backup": {
+        "selectionKey": "G20|RPG3_GenericPunch_Impact01.wav|27",
+        "clipGuid": "f5d10d096b7810c4e81e7ec4a5959f16",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_GenericPunch_Impact01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G21",
+      "purpose": "플레이어·동료 사망 효과",
+      "soundId": "HeroDeath",
+      "relativePath": "RPG3_GenericMisc_LowBoom01.wav",
+      "backup": {
+        "selectionKey": "G21|RPG3_GenericMisc_LowBoom01.wav|25",
+        "clipGuid": "39c77c654a2fa034aa61bc38b7642609",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_GenericMisc_LowBoom01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G21",
+      "purpose": "플레이어·동료 사망 효과",
+      "soundId": "CompanionDeath",
+      "relativePath": "RPG3_GenericMisc_LowBoom01.wav",
+      "backup": {
+        "selectionKey": "G21|RPG3_GenericMisc_LowBoom01.wav|28",
+        "clipGuid": "39c77c654a2fa034aa61bc38b7642609",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_GenericMisc_LowBoom01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G22",
+      "purpose": "체력 아이템",
+      "soundId": "ItemUse",
+      "relativePath": "magic_spell_healing_50.wav",
+      "backup": {
+        "selectionKey": "G22|magic_spell_healing_50.wav|26",
+        "clipGuid": "9977eae69e24c2b4b960b4680f60bc66",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/magic_spell_healing_50.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "현재 두 아이템은 ItemUse를 공유합니다. ItemUse의 기본음은 체력 선택음이며 전용 ID 호출 구분은 후속입니다."
+      }
+    },
+    {
+      "group": "G22",
+      "purpose": "체력 아이템",
+      "soundId": "HealthItemUse",
+      "relativePath": "magic_spell_healing_50.wav",
+      "backup": {
+        "selectionKey": "G22|magic_spell_healing_50.wav|220",
+        "clipGuid": "9977eae69e24c2b4b960b4680f60bc66",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/magic_spell_healing_50.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "현재 두 아이템은 ItemUse를 공유합니다. ItemUse의 기본음은 체력 선택음이며 전용 ID 호출 구분은 후속입니다."
+      }
+    },
+    {
+      "group": "G23",
+      "purpose": "에너지 아이템",
+      "soundId": "EnergyItemUse",
+      "relativePath": "magic_spell_potion_11.wav",
+      "backup": {
+        "selectionKey": "G23|magic_spell_potion_11.wav|221",
+        "clipGuid": "da1c7671cffe12547bb6d64e55c97769",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/magic_spell_potion_11.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "현재 두 아이템은 ItemUse를 공유합니다. ItemUse의 기본음은 체력 선택음이며 전용 ID 호출 구분은 후속입니다."
+      }
+    },
+    {
+      "group": "G24",
+      "purpose": "웨이브 시작",
+      "soundId": "WaveStart",
+      "relativePath": "RPG3_GenericMisc_LowBoom01.wav",
+      "backup": {
+        "selectionKey": "G24|RPG3_GenericMisc_LowBoom01.wav|200",
+        "clipGuid": "39c77c654a2fa034aa61bc38b7642609",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_GenericMisc_LowBoom01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G25",
+      "purpose": "스테이지 승리",
+      "soundId": "StageClear",
+      "relativePath": "RPG3_Enchantment2_Success01.wav",
+      "backup": {
+        "selectionKey": "G25|RPG3_Enchantment2_Success01.wav|201",
+        "clipGuid": "3ea599aa9204d044aa5d9a47f35b8551",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_Enchantment2_Success01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G26",
+      "purpose": "스테이지 패배",
+      "soundId": "StageFail",
+      "relativePath": "RPG3_UI_NegativeAlert01.wav",
+      "backup": {
+        "selectionKey": "G26|RPG3_UI_NegativeAlert01.wav|202",
+        "clipGuid": "f23a9f52fac5beb48a9f1d10a8263554",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_UI_NegativeAlert01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "기존 호출 ID입니다. 모션 이벤트가 필요한 소리는 이벤트 연결을 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G27",
+      "purpose": "가시 함정 작동·타격",
+      "soundId": "SpikeTrapActivate",
+      "relativePath": "blade_slash_hit_02.wav",
+      "backup": {
+        "selectionKey": "G27|blade_slash_hit_02.wav|310",
+        "clipGuid": "b2116c6a4ed3ef943be2c874b076076b",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/blade_slash_hit_02.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G29",
+      "purpose": "화염 장판 단발",
+      "soundId": "FireTrapActivate",
+      "relativePath": "RPG3_FireMagicFlameThrower_P1_Start.wav",
+      "backup": {
+        "selectionKey": "G29|RPG3_FireMagicFlameThrower_P1_Start.wav|313",
+        "clipGuid": "fdb83f4840c057e46ae048a7bbcad8e0",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagicFlameThrower_P1_Start.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G30",
+      "purpose": "냉기 장판 효과",
+      "soundId": "FrostTrapActivate",
+      "relativePath": "RPG3_IceMagic_FreezeShort01.wav",
+      "backup": {
+        "selectionKey": "G30|RPG3_IceMagic_FreezeShort01.wav|314",
+        "clipGuid": "362dd17851038c548a50b07400c85824",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_IceMagic_FreezeShort01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G31",
+      "purpose": "충격 장치 방전",
+      "soundId": "ShockTrapActivate",
+      "relativePath": "RPG3_ElectricMagic_LightningZap01.wav",
+      "backup": {
+        "selectionKey": "G31|RPG3_ElectricMagic_LightningZap01.wav|315",
+        "clipGuid": "4d3fa7ea37e28cc44baf00dfd7331a82",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_ElectricMagic_LightningZap01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G32",
+      "purpose": "설치 확정·동료 배치",
+      "soundId": "InstallationPlace",
+      "relativePath": "fnt_ui_equip_gear_01.wav",
+      "backup": {
+        "selectionKey": "G32|fnt_ui_equip_gear_01.wav|300",
+        "clipGuid": "4f3d4917752382942bb2285f4613d6ba",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/fnt_ui_equip_gear_01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G32",
+      "purpose": "설치 확정·동료 배치",
+      "soundId": "CompanionPlace",
+      "relativePath": "fnt_ui_equip_gear_01.wav",
+      "backup": {
+        "selectionKey": "G32|fnt_ui_equip_gear_01.wav|261",
+        "clipGuid": "4f3d4917752382942bb2285f4613d6ba",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/fnt_ui_equip_gear_01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G33",
+      "purpose": "철거·환불",
+      "soundId": "InstallationRefund",
+      "relativePath": "coins_pickup_shake_01.wav",
+      "backup": {
+        "selectionKey": "G33|coins_pickup_shake_01.wav|302",
+        "clipGuid": "68fd63bbc755f994bba50793251b81cc",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/coins_pickup_shake_01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: InstallationRefund. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G33",
+      "purpose": "철거·환불",
+      "soundId": "InstallationRemove",
+      "relativePath": "fnt_ui_equip_items_01.wav",
+      "backup": {
+        "selectionKey": "G33|fnt_ui_equip_items_01.wav|301",
+        "clipGuid": "693bd4f607d39cd4b85ab0bf8f651dc7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/fnt_ui_equip_items_01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: InstallationRemove. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G35",
+      "purpose": "구매·고용·강화 성공",
+      "soundId": "ShopPurchase",
+      "relativePath": "coins_pickup_shake_02.wav",
+      "backup": {
+        "selectionKey": "G35|coins_pickup_shake_02.wav|250",
+        "clipGuid": "3ea57e70dfb5a534da8908031743f2a7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/coins_pickup_shake_02.wav",
+        "soundType": "Ui",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G35",
+      "purpose": "구매·고용·강화 성공",
+      "soundId": "CompanionHire",
+      "relativePath": "coins_pickup_shake_02.wav",
+      "backup": {
+        "selectionKey": "G35|coins_pickup_shake_02.wav|260",
+        "clipGuid": "3ea57e70dfb5a534da8908031743f2a7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/coins_pickup_shake_02.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G35",
+      "purpose": "구매·고용·강화 성공",
+      "soundId": "UpgradeSuccess",
+      "relativePath": "coins_pickup_shake_02.wav",
+      "backup": {
+        "selectionKey": "G35|coins_pickup_shake_02.wav|251",
+        "clipGuid": "3ea57e70dfb5a534da8908031743f2a7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/coins_pickup_shake_02.wav",
+        "soundType": "Ui",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G36",
+      "purpose": "장비·슬롯 선택",
+      "soundId": "UiEquip",
+      "relativePath": "fnt_ui_equip_items_02.wav",
+      "backup": {
+        "selectionKey": "G36|fnt_ui_equip_items_02.wav|242",
+        "clipGuid": "f1601664fe2188b419520f55cd5b95e5",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/fnt_ui_equip_items_02.wav",
+        "soundType": "Ui",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G37",
+      "purpose": "도감·도움말·메뉴 열기·페이지",
+      "soundId": "UiPage",
+      "relativePath": "fnt_ui_page_next_01.wav",
+      "backup": {
+        "selectionKey": "G37|fnt_ui_page_next_01.wav|243",
+        "clipGuid": "fc29e0dfa4eceae4baf51046eb875331",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/fnt_ui_page_next_01.wav",
+        "soundType": "Ui",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G38",
+      "purpose": "보상·연속 처치·미션 알림",
+      "soundId": "CurrencyReward",
+      "relativePath": "coins_pickup_shake_02.wav",
+      "backup": {
+        "selectionKey": "G38|coins_pickup_shake_02.wav|252",
+        "clipGuid": "3ea57e70dfb5a534da8908031743f2a7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/coins_pickup_shake_02.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G38",
+      "purpose": "보상·연속 처치·미션 알림",
+      "soundId": "ComboReward",
+      "relativePath": "coins_pickup_shake_02.wav",
+      "backup": {
+        "selectionKey": "G38|coins_pickup_shake_02.wav|253",
+        "clipGuid": "3ea57e70dfb5a534da8908031743f2a7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/coins_pickup_shake_02.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G38",
+      "purpose": "보상·연속 처치·미션 알림",
+      "soundId": "MissionReward",
+      "relativePath": "coins_pickup_shake_02.wav",
+      "backup": {
+        "selectionKey": "G38|coins_pickup_shake_02.wav|254",
+        "clipGuid": "3ea57e70dfb5a534da8908031743f2a7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/coins_pickup_shake_02.wav",
+        "soundType": "Ui",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G39",
+      "purpose": "일반·빠른 적 보이스",
+      "soundId": "EnemyVoice",
+      "relativePath": "monster_small_B_voice_04.wav",
+      "backup": {
+        "selectionKey": "G39|monster_small_B_voice_04.wav|400",
+        "clipGuid": "49a2d6bb7b9e2d444a0e20fd8c9c9c22",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/monster_small_B_voice_04.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G40",
+      "purpose": "탱커·보스 대형 적 보이스",
+      "soundId": "TankVoice",
+      "relativePath": "monster_large_A_voice_01.wav",
+      "backup": {
+        "selectionKey": "G40|monster_large_A_voice_01.wav|401",
+        "clipGuid": "fb509d2d8c8079e40a7eb55e5171e56a",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/monster_large_A_voice_01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: TankVoice. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G40",
+      "purpose": "탱커·보스 대형 적 보이스",
+      "soundId": "BossVoice",
+      "relativePath": "monster_huge_voice_04.wav",
+      "backup": {
+        "selectionKey": "G40|monster_huge_voice_04.wav|402",
+        "clipGuid": "77ff3ef7a538eae4592f056fa467b0dd",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/monster_huge_voice_04.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: BossVoice. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G41",
+      "purpose": "적 공격·피격 보이스",
+      "soundId": "EnemyHurt",
+      "relativePath": "RPG3_GenericPunch_Impact01.wav",
+      "backup": {
+        "selectionKey": "G41|RPG3_GenericPunch_Impact01.wav|404",
+        "clipGuid": "f5d10d096b7810c4e81e7ec4a5959f16",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_GenericPunch_Impact01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G42",
+      "purpose": "비행 적·날갯짓 대용",
+      "soundId": "FlyingEnemyMove",
+      "relativePath": "RPG3_Generic_SubtleWhoosh03.wav",
+      "backup": {
+        "selectionKey": "G42|RPG3_Generic_SubtleWhoosh03.wav|406",
+        "clipGuid": "817b98e5fe3ecea4eb427fd013e404c7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_Generic_SubtleWhoosh03.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G44",
+      "purpose": "방어 목표 피해·적 통과·위기 경고",
+      "soundId": "ObjectiveHurt",
+      "relativePath": "RPG3_Magic_BoulderImpact04.wav",
+      "backup": {
+        "selectionKey": "G44|RPG3_Magic_BoulderImpact04.wav|420",
+        "clipGuid": "a2c72cbad24fe194e947e779affbe893",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_Magic_BoulderImpact04.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: ObjectiveHurt. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G44",
+      "purpose": "방어 목표 피해·적 통과·위기 경고",
+      "soundId": "DangerNotice",
+      "relativePath": "heartbeat_accel.wav",
+      "backup": {
+        "selectionKey": "G44|heartbeat_accel.wav|421",
+        "clipGuid": "d47427e4a1211184bbeb2b83b7f4a66f",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/heartbeat_accel.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: DangerNotice. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G45",
+      "purpose": "부활·동료 재고용 출현",
+      "soundId": "HeroRevive",
+      "relativePath": "RPG3_MagicCute2_Heal03.wav",
+      "backup": {
+        "selectionKey": "G45|RPG3_MagicCute2_Heal03.wav|222",
+        "clipGuid": "3d5859a2663d4cd47ab53cde45eb94f6",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_MagicCute2_Heal03.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G45",
+      "purpose": "부활·동료 재고용 출현",
+      "soundId": "CompanionSpawn",
+      "relativePath": "RPG3_MagicCute2_Heal03.wav",
+      "backup": {
+        "selectionKey": "G45|RPG3_MagicCute2_Heal03.wav|262",
+        "clipGuid": "3d5859a2663d4cd47ab53cde45eb94f6",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_MagicCute2_Heal03.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "음원 데이터 제공용입니다. 서비스 전달과 실제 행동/메뉴 호출 연결은 담당자 후속입니다."
+      }
+    },
+    {
+      "group": "G46",
+      "purpose": "웨이브 완료·준비 전환·카운트 신호",
+      "soundId": "WaveComplete",
+      "relativePath": "RPG3_UI_NeutralNotification01.wav",
+      "backup": {
+        "selectionKey": "G46|RPG3_UI_NeutralNotification01.wav|230",
+        "clipGuid": "050d32d7885c2bf478b5f094229cd45d",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_UI_NeutralNotification01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "데이터 등록 대상입니다. 실제 재생 연결 여부는 이 배정으로 판정하지 않습니다."
+      }
+    },
+    {
+      "group": "G47",
+      "purpose": "폭발물·시간제 문·수동 광역 함정",
+      "soundId": "EnvironmentExplosion",
+      "relativePath": "RPG3_FireMagic_Explosion01.wav",
+      "backup": {
+        "selectionKey": "G47|RPG3_FireMagic_Explosion01.wav|430",
+        "clipGuid": "6ca470aab8efaac42a24a64a518acbdf",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_FireMagic_Explosion01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: EnvironmentExplosion. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G47",
+      "purpose": "폭발물·시간제 문·수동 광역 함정",
+      "soundId": "GateMove",
+      "relativePath": "door_metal_close_01.wav",
+      "backup": {
+        "selectionKey": "G47|door_metal_close_01.wav|431",
+        "clipGuid": "fca8a5da209211346a5108b236318bdf",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/door_metal_close_01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: GateMove. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G47",
+      "purpose": "폭발물·시간제 문·수동 광역 함정",
+      "soundId": "GateMove",
+      "relativePath": "chains_02.wav",
+      "backup": {
+        "selectionKey": "G47|chains_02.wav|431",
+        "clipGuid": "63343fb8deb410341aab9544307af252",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/chains_02.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: GateMove. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G47",
+      "purpose": "폭발물·시간제 문·수동 광역 함정",
+      "soundId": "MechanismActivate",
+      "relativePath": "trap_activate_01.wav",
+      "backup": {
+        "selectionKey": "G47|trap_activate_01.wav|432",
+        "clipGuid": "2c6fad511d087794cb6ac7a26a6780e7",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/trap_activate_01.wav",
+        "soundType": "Sfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "그룹 내 파일 역할 기준의 초기 배정: MechanismActivate. 음원과 용도를 확인한 뒤 필요하면 ID를 변경하세요."
+      }
+    },
+    {
+      "group": "G48",
+      "purpose": "던전·성채 배경 분위기",
+      "soundId": "PlayBgm",
+      "relativePath": "amb_dread.wav",
+      "backup": {
+        "selectionKey": "G48|amb_dread.wav|0",
+        "clipGuid": "e9f89bb09b57f384c887ce26b12a7d0f",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/amb_dread.wav",
+        "soundType": "Bgm",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "배경음 확보. TitleBgm/PlayBgm에 하나씩 배정한 행만 등록하세요. 나머지는 예비로 유지합니다."
+      }
+    },
+    {
+      "group": "G48",
+      "purpose": "던전·성채 배경 분위기",
+      "soundId": "TitleBgm",
+      "relativePath": "amb_forest.wav",
+      "backup": {
+        "selectionKey": "G48|amb_forest.wav|0",
+        "clipGuid": "1028175787b462448badd5da85faedde",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/amb_forest.wav",
+        "soundType": "Bgm",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "배경음 확보. TitleBgm/PlayBgm에 하나씩 배정한 행만 등록하세요. 나머지는 예비로 유지합니다."
+      }
+    },
+    {
+      "group": "G48",
+      "purpose": "던전·성채 배경 분위기",
+      "soundId": "None",
+      "relativePath": "RPG3_PAD_DarkLoop01.wav",
+      "backup": {
+        "selectionKey": "G48|RPG3_PAD_DarkLoop01.wav|0",
+        "clipGuid": "54057d85c843d18438dd792382c37c8b",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/RPG3_PAD_DarkLoop01.wav",
+        "soundType": "Bgm",
+        "volume": 1,
+        "register": false,
+        "isReserve": true,
+        "requiresLoopController": false,
+        "note": "사용처 미지정 예비 배경음 후보입니다. 현재 씬 BGM 배정에서 제외합니다."
+      }
+    },
+    {
+      "group": "G49",
+      "purpose": "횃불·불 장판 지속 루프",
+      "soundId": "FireTrapLoop",
+      "relativePath": "bonfire_loop_03.wav",
+      "backup": {
+        "selectionKey": "G49|bonfire_loop_03.wav|316",
+        "clipGuid": "6af34547865301d4fbcb386b1a1fc64b",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/bonfire_loop_03.wav",
+        "soundType": "LoopSfx",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": true,
+        "note": "화염 장판 지속음입니다. LoopSfx와 FireTrapSound/SoundLoopPlayer로 작동 시작과 중단을 처리합니다."
+      }
+    },
+    {
+      "group": "G50",
+      "purpose": "플레이어 발소리 (임시)",
+      "soundId": "HeroFootstep",
+      "relativePath": "step1.wav",
+      "backup": {
+        "selectionKey": "G50|step1.wav|20",
+        "clipGuid": "fd9aa3c2dbe5b6e4794a66b531b6b661",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/step1.wav",
+        "soundType": "Footstep",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "JSON의 soundId로 배정했습니다. 실제 호출/출력은 별도로 확인하세요."
+      }
+    },
+    {
+      "group": "G51",
+      "purpose": "동료 발소리 (임시)",
+      "soundId": "CompanionFootstep",
+      "relativePath": "step1.wav",
+      "backup": {
+        "selectionKey": "G51|step1.wav|21",
+        "clipGuid": "fd9aa3c2dbe5b6e4794a66b531b6b661",
+        "clipAssetPath": "Assets/99. Assets/Sound/SelectedAudio/step1.wav",
+        "soundType": "Footstep",
+        "volume": 1,
+        "register": true,
+        "isReserve": false,
+        "requiresLoopController": false,
+        "note": "JSON의 soundId로 배정했습니다. 실제 호출/출력은 별도로 확인하세요."
+      }
+    }
+  ]
+}

@@ -1,0 +1,890 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0af3961a88045c4392cbff7c9e5412d, type: 3}
+  m_Name: SoundSetupProfile
+  m_EditorClassIdentifier: 
+  _audioFolder: {fileID: 102900000, guid: d60c7fef696d5cc4daf8d0bee8643447, type: 3}
+  _dataMap: {fileID: 11400000, guid: 3b92e8681dd2e6d49880b57d455b0db7, type: 2}
+  _newMapPath: Assets/03. Configs/SoundDataMap.asset
+  _managerPrefab: {fileID: 8376997370573961194, guid: d1e291e5b28c54c4790bddc4182465c1, type: 3}
+  _connectManager: 1
+  _replaceExisting: 1
+  _entries:
+  - _register: 1
+    _selectionKey: G01|ui_select_click_05.wav|10
+    _purpose: "G01 / UI \uC120\uD0DD\xB7\uD655\uC778 / ui_select_click_05.wav"
+    _id: 10
+    _type: 1
+    _clip: {fileID: 8300000, guid: 64572552a17d6714a9a97945c6ac160f, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G02|fnt_ui_confirm_cancel_02.wav|11
+    _purpose: "G02 / UI \uB4A4\uB85C\xB7\uCDE8\uC18C / fnt_ui_confirm_cancel_02.wav"
+    _id: 11
+    _type: 1
+    _clip: {fileID: 8300000, guid: cb92b19eaab07294099d09b83a0a5953, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G03|blade_whoosh_01.wav|100
+    _purpose: "G03 / \uAC80 \uAE30\uBCF8 \uD718\uB450\uB974\uAE30 / blade_whoosh_01.wav"
+    _id: 100
+    _type: 2
+    _clip: {fileID: 8300000, guid: 340b865e5016f10449ccfdeb19036322, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G04|blade_whoosh_heavy_03.wav|101
+    _purpose: "G04 / \uAC80 \uC804\uBC29 \uC2A4\uD0AC / blade_whoosh_heavy_03.wav"
+    _id: 101
+    _type: 2
+    _clip: {fileID: 8300000, guid: 861348688e7d2a94f9437406e3d66df6, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G05|medwpn2_heavy_whoosh_hit_04.wav|102
+    _purpose: "G05 / \uAC80 \uC8FC\uBCC0 \uAD81\uADF9\uAE30 / medwpn2_heavy_whoosh_hit_04.wav"
+    _id: 102
+    _type: 2
+    _clip: {fileID: 8300000, guid: 9605454ffb4a6e04d95c53f9ccb8c1ac, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G06|arrow_whoosh.wav|110
+    _purpose: "G06 / \uD65C \uAE30\uBCF8 \uBC1C\uC0AC\xB7\uB3D9\uB8CC \uAD81\uC218
+      / arrow_whoosh.wav"
+    _id: 110
+    _type: 2
+    _clip: {fileID: 8300000, guid: 285e872703d6dc246a57591fb7d24d29, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G07|RPG3_GenericArrow_Impact01.wav|111
+    _purpose: "G07 / \uD65C \uAE30\uBCF8 \uBA85\uC911 / RPG3_GenericArrow_Impact01.wav"
+    _id: 111
+    _type: 2
+    _clip: {fileID: 8300000, guid: dbb88b9cd481cca47b34225a4bd2272d, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G08|RPG3_GenericArrow_Shoot01.wav|112
+    _purpose: "G08 / \uAD00\uD1B5 \uD654\uC0B4 \uBC1C\uC0AC / RPG3_GenericArrow_Shoot01.wav"
+    _id: 112
+    _type: 2
+    _clip: {fileID: 8300000, guid: 7f75de9ad2cfb8247976089f37b59b4e, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G09|RPG3_FireMagicArrow_Impact05_Final.wav|113
+    _purpose: "G09 / \uAD00\uD1B5 \uD654\uC0B4 \uBA85\uC911 / RPG3_FireMagicArrow_Impact05_Final.wav"
+    _id: 113
+    _type: 2
+    _clip: {fileID: 8300000, guid: d85ab03c733636d4d857397dcfad7ab9, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G10|RPG3_FireMagicArrow_MutipleShot.wav|114
+    _purpose: "G10 / \uD654\uC0B4\uBE44 \uC0DD\uC131 / RPG3_FireMagicArrow_MutipleShot.wav"
+    _id: 114
+    _type: 2
+    _clip: {fileID: 8300000, guid: d59d4618d4e99ef4ea69f14437ad54d5, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G11|RPG3_MagicArrow_Impact01.wav|210
+    _purpose: "G11 / \uD654\uC0B4\uBE44 \uC8FC\uAE30 \uD0C0\uACA9 / RPG3_MagicArrow_Impact01.wav"
+    _id: 210
+    _type: 2
+    _clip: {fileID: 8300000, guid: 2ba49cc91ed5e7d41bfef43b56a0e94e, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G12|RPG3_FireMagicBall_Projectile02.wav|120
+    _purpose: "G12 / \uC2A4\uD0DC\uD504 \uAE30\uBCF8 \uBC1C\uC0AC\xB7\uB3D9\uB8CC
+      \uB9C8\uBC95\uC0AC / RPG3_FireMagicBall_Projectile02.wav"
+    _id: 120
+    _type: 2
+    _clip: {fileID: 8300000, guid: 7ef7c7afc93591440808e5aefb0c5d1b, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G13|RPG3_FireMagic_Impact02v2.wav|121
+    _purpose: "G13 / \uC2A4\uD0DC\uD504 \uAE30\uBCF8 \uD3ED\uBC1C / RPG3_FireMagic_Impact02v2.wav"
+    _id: 121
+    _type: 2
+    _clip: {fileID: 8300000, guid: e60557dacb5b74046a174fd499a8d29a, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G14|RPG3_FireMagicBall_Projectile02.wav|122
+    _purpose: "G14 / \uAC15\uD654 \uB9C8\uBC95\uD0C4 \uBC1C\uC0AC / RPG3_FireMagicBall_Projectile02.wav"
+    _id: 122
+    _type: 2
+    _clip: {fileID: 8300000, guid: 7ef7c7afc93591440808e5aefb0c5d1b, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G15|RPG3_FireMagicBall_HeavyImpact01.wav|123
+    _purpose: "G15 / \uAC15\uD654 \uB9C8\uBC95\uD0C4 \uD3ED\uBC1C / RPG3_FireMagicBall_HeavyImpact01.wav"
+    _id: 123
+    _type: 2
+    _clip: {fileID: 8300000, guid: 838a2157bce32074393bcc7a1f0e4616, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G16|RPG3_FireMagicEpic_Impact01.wav|124
+    _purpose: "G16 / \uBD88\uAE30\uB465 \uC0DD\uC131 / RPG3_FireMagicEpic_Impact01.wav"
+    _id: 124
+    _type: 2
+    _clip: {fileID: 8300000, guid: 09bc1e8dd64a1c24a8f30fc2f9a65369, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G17|RPG3_FireMagic_LightImpact01.wav|211
+    _purpose: "G17 / \uBD88\uAE30\uB465 \uC8FC\uAE30 \uD0C0\uACA9 / RPG3_FireMagic_LightImpact01.wav"
+    _id: 211
+    _type: 2
+    _clip: {fileID: 8300000, guid: f8bb584dba0ca144e89321567415414e, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G18|combat_whoosh_02.wav|22
+    _purpose: "G18 / \uC810\uD504 \uBCF4\uC870 \uD6A8\uACFC / combat_whoosh_02.wav"
+    _id: 22
+    _type: 2
+    _clip: {fileID: 8300000, guid: c4a0428372b987a4f8df7c5022587b9d, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G19|RPG3_GenericMisc_AttackMissed01.wav|23
+    _purpose: "G19 / \uD68C\uD53C \uAD6C\uB974\uAE30 \uBCF4\uC870 \uD6A8\uACFC /
+      RPG3_GenericMisc_AttackMissed01.wav"
+    _id: 23
+    _type: 2
+    _clip: {fileID: 8300000, guid: 7d0e17d2a6a33834eba4438c82008979, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G20|RPG3_GenericPunch_Impact01.wav|24
+    _purpose: "G20 / \uD50C\uB808\uC774\uC5B4\xB7\uB3D9\uB8CC \uD53C\uACA9 \uD6A8\uACFC
+      / RPG3_GenericPunch_Impact01.wav"
+    _id: 24
+    _type: 2
+    _clip: {fileID: 8300000, guid: 439d723aa02d4f243861c65a98937314, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G20|RPG3_GenericPunch_Impact01.wav|27
+    _purpose: "G20 / \uD50C\uB808\uC774\uC5B4\xB7\uB3D9\uB8CC \uD53C\uACA9 \uD6A8\uACFC
+      / RPG3_GenericPunch_Impact01.wav"
+    _id: 27
+    _type: 2
+    _clip: {fileID: 8300000, guid: 439d723aa02d4f243861c65a98937314, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G21|RPG3_GenericMisc_LowBoom01.wav|25
+    _purpose: "G21 / \uD50C\uB808\uC774\uC5B4\xB7\uB3D9\uB8CC \uC0AC\uB9DD \uD6A8\uACFC
+      / RPG3_GenericMisc_LowBoom01.wav"
+    _id: 25
+    _type: 2
+    _clip: {fileID: 8300000, guid: 2dd2bae9969f7a54fb3541f7bb30c093, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G21|RPG3_GenericMisc_LowBoom01.wav|28
+    _purpose: "G21 / \uD50C\uB808\uC774\uC5B4\xB7\uB3D9\uB8CC \uC0AC\uB9DD \uD6A8\uACFC
+      / RPG3_GenericMisc_LowBoom01.wav"
+    _id: 28
+    _type: 2
+    _clip: {fileID: 8300000, guid: 2dd2bae9969f7a54fb3541f7bb30c093, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G22|magic_spell_healing_50.wav|26
+    _purpose: "G22 / \uCCB4\uB825 \uC544\uC774\uD15C / magic_spell_healing_50.wav"
+    _id: 26
+    _type: 2
+    _clip: {fileID: 8300000, guid: a64e7ce0bbf7570489df83e197f28220, type: 3}
+    _volume: 1
+    _note: "\uD604\uC7AC \uB450 \uC544\uC774\uD15C\uC740 ItemUse\uB97C \uACF5\uC720\uD569\uB2C8\uB2E4.
+      ItemUse\uC758 \uAE30\uBCF8\uC74C\uC740 \uCCB4\uB825 \uC120\uD0DD\uC74C\uC774\uBA70
+      \uC804\uC6A9 ID \uD638\uCD9C \uAD6C\uBD84\uC740 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G22|magic_spell_healing_50.wav|220
+    _purpose: "G22 / \uCCB4\uB825 \uC544\uC774\uD15C / magic_spell_healing_50.wav"
+    _id: 220
+    _type: 2
+    _clip: {fileID: 8300000, guid: a64e7ce0bbf7570489df83e197f28220, type: 3}
+    _volume: 1
+    _note: "\uD604\uC7AC \uB450 \uC544\uC774\uD15C\uC740 ItemUse\uB97C \uACF5\uC720\uD569\uB2C8\uB2E4.
+      ItemUse\uC758 \uAE30\uBCF8\uC74C\uC740 \uCCB4\uB825 \uC120\uD0DD\uC74C\uC774\uBA70
+      \uC804\uC6A9 ID \uD638\uCD9C \uAD6C\uBD84\uC740 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G23|magic_spell_potion_11.wav|221
+    _purpose: "G23 / \uC5D0\uB108\uC9C0 \uC544\uC774\uD15C / magic_spell_potion_11.wav"
+    _id: 221
+    _type: 2
+    _clip: {fileID: 8300000, guid: eb3f190c0d5ef1a4b86710156db045d4, type: 3}
+    _volume: 1
+    _note: "\uD604\uC7AC \uB450 \uC544\uC774\uD15C\uC740 ItemUse\uB97C \uACF5\uC720\uD569\uB2C8\uB2E4.
+      ItemUse\uC758 \uAE30\uBCF8\uC74C\uC740 \uCCB4\uB825 \uC120\uD0DD\uC74C\uC774\uBA70
+      \uC804\uC6A9 ID \uD638\uCD9C \uAD6C\uBD84\uC740 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G24|RPG3_GenericMisc_LowBoom01.wav|200
+    _purpose: "G24 / \uC6E8\uC774\uBE0C \uC2DC\uC791 / RPG3_GenericMisc_LowBoom01.wav"
+    _id: 200
+    _type: 2
+    _clip: {fileID: 8300000, guid: 2dd2bae9969f7a54fb3541f7bb30c093, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G25|RPG3_Enchantment2_Success01.wav|201
+    _purpose: "G25 / \uC2A4\uD14C\uC774\uC9C0 \uC2B9\uB9AC / RPG3_Enchantment2_Success01.wav"
+    _id: 201
+    _type: 2
+    _clip: {fileID: 8300000, guid: 5eefae7bf6bd8b64193b7da306c84102, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G26|RPG3_UI_NegativeAlert01.wav|202
+    _purpose: "G26 / \uC2A4\uD14C\uC774\uC9C0 \uD328\uBC30 / RPG3_UI_NegativeAlert01.wav"
+    _id: 202
+    _type: 2
+    _clip: {fileID: 8300000, guid: 3fb58cbf110ddac48bce24176e547cbc, type: 3}
+    _volume: 1
+    _note: "\uAE30\uC874 \uD638\uCD9C ID\uC785\uB2C8\uB2E4. \uBAA8\uC158 \uC774\uBCA4\uD2B8\uAC00
+      \uD544\uC694\uD55C \uC18C\uB9AC\uB294 \uC774\uBCA4\uD2B8 \uC5F0\uACB0\uC744
+      \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G27|blade_slash_hit_02.wav|310
+    _purpose: "G27 / \uAC00\uC2DC \uD568\uC815 \uC791\uB3D9\xB7\uD0C0\uACA9 / blade_slash_hit_02.wav"
+    _id: 310
+    _type: 2
+    _clip: {fileID: 8300000, guid: 331b6c5acfcf19f4c88d032471d65aca, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G29|RPG3_FireMagicFlameThrower_P1_Start.wav|313
+    _purpose: "G29 / \uD654\uC5FC \uC7A5\uD310 \uB2E8\uBC1C / RPG3_FireMagicFlameThrower_P1_Start.wav"
+    _id: 313
+    _type: 2
+    _clip: {fileID: 8300000, guid: a49aaccd0a70f9342bb033b8b0569269, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G30|RPG3_IceMagic_FreezeShort01.wav|314
+    _purpose: "G30 / \uB0C9\uAE30 \uC7A5\uD310 \uD6A8\uACFC / RPG3_IceMagic_FreezeShort01.wav"
+    _id: 314
+    _type: 2
+    _clip: {fileID: 8300000, guid: 4849717ec0358df4d8ae823d627de209, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G31|RPG3_ElectricMagic_LightningZap01.wav|315
+    _purpose: "G31 / \uCDA9\uACA9 \uC7A5\uCE58 \uBC29\uC804 / RPG3_ElectricMagic_LightningZap01.wav"
+    _id: 315
+    _type: 2
+    _clip: {fileID: 8300000, guid: 25acd72c97d10cc46ba05338cbd2acf5, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G32|fnt_ui_equip_gear_01.wav|300
+    _purpose: "G32 / \uC124\uCE58 \uD655\uC815\xB7\uB3D9\uB8CC \uBC30\uCE58 / fnt_ui_equip_gear_01.wav"
+    _id: 300
+    _type: 2
+    _clip: {fileID: 8300000, guid: c9b05dc9b739aee42a354dd24304f0b2, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G32|fnt_ui_equip_gear_01.wav|261
+    _purpose: "G32 / \uC124\uCE58 \uD655\uC815\xB7\uB3D9\uB8CC \uBC30\uCE58 / fnt_ui_equip_gear_01.wav"
+    _id: 261
+    _type: 2
+    _clip: {fileID: 8300000, guid: c9b05dc9b739aee42a354dd24304f0b2, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G33|coins_pickup_shake_01.wav|302
+    _purpose: "G33 / \uCCA0\uAC70\xB7\uD658\uBD88 / coins_pickup_shake_01.wav"
+    _id: 302
+    _type: 2
+    _clip: {fileID: 8300000, guid: c432346c0ebaeb14bb0cab9fd2f6d8f6, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: InstallationRefund. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G33|fnt_ui_equip_items_01.wav|301
+    _purpose: "G33 / \uCCA0\uAC70\xB7\uD658\uBD88 / fnt_ui_equip_items_01.wav"
+    _id: 301
+    _type: 2
+    _clip: {fileID: 8300000, guid: d4b06db55f70f1743bb025293fd047b1, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: InstallationRemove. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G35|coins_pickup_shake_02.wav|250
+    _purpose: "G35 / \uAD6C\uB9E4\xB7\uACE0\uC6A9\xB7\uAC15\uD654 \uC131\uACF5 /
+      coins_pickup_shake_02.wav"
+    _id: 250
+    _type: 1
+    _clip: {fileID: 8300000, guid: 9c63ec8d649df9448b55c446876a310f, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G35|coins_pickup_shake_02.wav|260
+    _purpose: "G35 / \uAD6C\uB9E4\xB7\uACE0\uC6A9\xB7\uAC15\uD654 \uC131\uACF5 /
+      coins_pickup_shake_02.wav"
+    _id: 260
+    _type: 2
+    _clip: {fileID: 8300000, guid: 9c63ec8d649df9448b55c446876a310f, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G35|coins_pickup_shake_02.wav|251
+    _purpose: "G35 / \uAD6C\uB9E4\xB7\uACE0\uC6A9\xB7\uAC15\uD654 \uC131\uACF5 /
+      coins_pickup_shake_02.wav"
+    _id: 251
+    _type: 1
+    _clip: {fileID: 8300000, guid: 9c63ec8d649df9448b55c446876a310f, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G36|fnt_ui_equip_items_02.wav|242
+    _purpose: "G36 / \uC7A5\uBE44\xB7\uC2AC\uB86F \uC120\uD0DD / fnt_ui_equip_items_02.wav"
+    _id: 242
+    _type: 1
+    _clip: {fileID: 8300000, guid: 372f3db7032b60f4792262cff81db78c, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G37|fnt_ui_page_next_01.wav|243
+    _purpose: "G37 / \uB3C4\uAC10\xB7\uB3C4\uC6C0\uB9D0\xB7\uBA54\uB274 \uC5F4\uAE30\xB7\uD398\uC774\uC9C0
+      / fnt_ui_page_next_01.wav"
+    _id: 243
+    _type: 1
+    _clip: {fileID: 8300000, guid: b966bee604ef5a4498285444ee9e2f35, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G38|coins_pickup_shake_02.wav|252
+    _purpose: "G38 / \uBCF4\uC0C1\xB7\uC5F0\uC18D \uCC98\uCE58\xB7\uBBF8\uC158 \uC54C\uB9BC
+      / coins_pickup_shake_02.wav"
+    _id: 252
+    _type: 2
+    _clip: {fileID: 8300000, guid: 9c63ec8d649df9448b55c446876a310f, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G38|coins_pickup_shake_02.wav|253
+    _purpose: "G38 / \uBCF4\uC0C1\xB7\uC5F0\uC18D \uCC98\uCE58\xB7\uBBF8\uC158 \uC54C\uB9BC
+      / coins_pickup_shake_02.wav"
+    _id: 253
+    _type: 2
+    _clip: {fileID: 8300000, guid: 9c63ec8d649df9448b55c446876a310f, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G38|coins_pickup_shake_02.wav|254
+    _purpose: "G38 / \uBCF4\uC0C1\xB7\uC5F0\uC18D \uCC98\uCE58\xB7\uBBF8\uC158 \uC54C\uB9BC
+      / coins_pickup_shake_02.wav"
+    _id: 254
+    _type: 1
+    _clip: {fileID: 8300000, guid: 9c63ec8d649df9448b55c446876a310f, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G39|monster_small_B_voice_04.wav|400
+    _purpose: "G39 / \uC77C\uBC18\xB7\uBE60\uB978 \uC801 \uBCF4\uC774\uC2A4 / monster_small_B_voice_04.wav"
+    _id: 400
+    _type: 2
+    _clip: {fileID: 8300000, guid: bcd2de60d41af184ab719a5e06eedf53, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G40|monster_large_A_voice_01.wav|401
+    _purpose: "G40 / \uD0F1\uCEE4\xB7\uBCF4\uC2A4 \uB300\uD615 \uC801 \uBCF4\uC774\uC2A4
+      / monster_large_A_voice_01.wav"
+    _id: 401
+    _type: 2
+    _clip: {fileID: 8300000, guid: 30c48a95762595546a2f90b4539821b8, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: TankVoice. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G40|monster_huge_voice_04.wav|402
+    _purpose: "G40 / \uD0F1\uCEE4\xB7\uBCF4\uC2A4 \uB300\uD615 \uC801 \uBCF4\uC774\uC2A4
+      / monster_huge_voice_04.wav"
+    _id: 402
+    _type: 2
+    _clip: {fileID: 8300000, guid: b8be260850fa7774faa112e712d542c9, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: BossVoice. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G41|RPG3_GenericPunch_Impact01.wav|404
+    _purpose: "G41 / \uC801 \uACF5\uACA9\xB7\uD53C\uACA9 \uBCF4\uC774\uC2A4 / RPG3_GenericPunch_Impact01.wav"
+    _id: 404
+    _type: 2
+    _clip: {fileID: 8300000, guid: 439d723aa02d4f243861c65a98937314, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G42|RPG3_Generic_SubtleWhoosh03.wav|406
+    _purpose: "G42 / \uBE44\uD589 \uC801\xB7\uB0A0\uAC2F\uC9D3 \uB300\uC6A9 / RPG3_Generic_SubtleWhoosh03.wav"
+    _id: 406
+    _type: 2
+    _clip: {fileID: 8300000, guid: 591eaf49109a118419a0ae6105564c82, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G44|RPG3_Magic_BoulderImpact04.wav|420
+    _purpose: "G44 / \uBC29\uC5B4 \uBAA9\uD45C \uD53C\uD574\xB7\uC801 \uD1B5\uACFC\xB7\uC704\uAE30
+      \uACBD\uACE0 / RPG3_Magic_BoulderImpact04.wav"
+    _id: 420
+    _type: 2
+    _clip: {fileID: 8300000, guid: 6fd0bc22abce2034a9a94a11f4625d9e, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: ObjectiveHurt. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G44|heartbeat_accel.wav|421
+    _purpose: "G44 / \uBC29\uC5B4 \uBAA9\uD45C \uD53C\uD574\xB7\uC801 \uD1B5\uACFC\xB7\uC704\uAE30
+      \uACBD\uACE0 / heartbeat_accel.wav"
+    _id: 421
+    _type: 2
+    _clip: {fileID: 8300000, guid: f42f4c1502744f04b8f7cb2ddddcde22, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: DangerNotice. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G45|RPG3_MagicCute2_Heal03.wav|222
+    _purpose: "G45 / \uBD80\uD65C\xB7\uB3D9\uB8CC \uC7AC\uACE0\uC6A9 \uCD9C\uD604
+      / RPG3_MagicCute2_Heal03.wav"
+    _id: 222
+    _type: 2
+    _clip: {fileID: 8300000, guid: 70fecdbda80cb8f499d8a246ef241da3, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G45|RPG3_MagicCute2_Heal03.wav|262
+    _purpose: "G45 / \uBD80\uD65C\xB7\uB3D9\uB8CC \uC7AC\uACE0\uC6A9 \uCD9C\uD604
+      / RPG3_MagicCute2_Heal03.wav"
+    _id: 262
+    _type: 2
+    _clip: {fileID: 8300000, guid: 70fecdbda80cb8f499d8a246ef241da3, type: 3}
+    _volume: 1
+    _note: "\uC74C\uC6D0 \uB370\uC774\uD130 \uC81C\uACF5\uC6A9\uC785\uB2C8\uB2E4.
+      \uC11C\uBE44\uC2A4 \uC804\uB2EC\uACFC \uC2E4\uC81C \uD589\uB3D9/\uBA54\uB274
+      \uD638\uCD9C \uC5F0\uACB0\uC740 \uB2F4\uB2F9\uC790 \uD6C4\uC18D\uC785\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G46|RPG3_UI_NeutralNotification01.wav|230
+    _purpose: "G46 / \uC6E8\uC774\uBE0C \uC644\uB8CC\xB7\uC900\uBE44 \uC804\uD658\xB7\uCE74\uC6B4\uD2B8
+      \uC2E0\uD638 / RPG3_UI_NeutralNotification01.wav"
+    _id: 230
+    _type: 2
+    _clip: {fileID: 8300000, guid: b5f42985e2ce5de45833b54a8b1443cd, type: 3}
+    _volume: 1
+    _note: "\uB370\uC774\uD130 \uB4F1\uB85D \uB300\uC0C1\uC785\uB2C8\uB2E4. \uC2E4\uC81C
+      \uC7AC\uC0DD \uC5F0\uACB0 \uC5EC\uBD80\uB294 \uC774 \uBC30\uC815\uC73C\uB85C
+      \uD310\uC815\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G47|RPG3_FireMagic_Explosion01.wav|430
+    _purpose: "G47 / \uD3ED\uBC1C\uBB3C\xB7\uC2DC\uAC04\uC81C \uBB38\xB7\uC218\uB3D9
+      \uAD11\uC5ED \uD568\uC815 / RPG3_FireMagic_Explosion01.wav"
+    _id: 430
+    _type: 2
+    _clip: {fileID: 8300000, guid: 5a371b4aee0ecae4fa6cd5fa25848858, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: EnvironmentExplosion. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G47|door_metal_close_01.wav|431
+    _purpose: "G47 / \uD3ED\uBC1C\uBB3C\xB7\uC2DC\uAC04\uC81C \uBB38\xB7\uC218\uB3D9
+      \uAD11\uC5ED \uD568\uC815 / door_metal_close_01.wav"
+    _id: 431
+    _type: 2
+    _clip: {fileID: 8300000, guid: 48bd7ef645c1ae842b9a2e1c927a437f, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: GateMove. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G47|chains_02.wav|431
+    _purpose: "G47 / \uD3ED\uBC1C\uBB3C\xB7\uC2DC\uAC04\uC81C \uBB38\xB7\uC218\uB3D9
+      \uAD11\uC5ED \uD568\uC815 / chains_02.wav"
+    _id: 431
+    _type: 2
+    _clip: {fileID: 8300000, guid: 92477fa27de75e849b11032b74c621da, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: GateMove. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G47|trap_activate_01.wav|432
+    _purpose: "G47 / \uD3ED\uBC1C\uBB3C\xB7\uC2DC\uAC04\uC81C \uBB38\xB7\uC218\uB3D9
+      \uAD11\uC5ED \uD568\uC815 / trap_activate_01.wav"
+    _id: 432
+    _type: 2
+    _clip: {fileID: 8300000, guid: 23656bb61075ebb448de6874ebc3de55, type: 3}
+    _volume: 1
+    _note: "\uADF8\uB8F9 \uB0B4 \uD30C\uC77C \uC5ED\uD560 \uAE30\uC900\uC758 \uCD08\uAE30
+      \uBC30\uC815: MechanismActivate. \uC74C\uC6D0\uACFC \uC6A9\uB3C4\uB97C \uD655\uC778\uD55C
+      \uB4A4 \uD544\uC694\uD558\uBA74 ID\uB97C \uBCC0\uACBD\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G48|amb_dread.wav|0
+    _purpose: "G48 / \uB358\uC804\xB7\uC131\uCC44 \uBC30\uACBD \uBD84\uC704\uAE30
+      / amb_dread.wav"
+    _id: 2
+    _type: 0
+    _clip: {fileID: 8300000, guid: d9fc2946341e2e744953c75976b439ff, type: 3}
+    _volume: 1
+    _note: "\uBC30\uACBD\uC74C \uD655\uBCF4. TitleBgm/PlayBgm\uC5D0 \uD558\uB098\uC529
+      \uBC30\uC815\uD55C \uD589\uB9CC \uB4F1\uB85D\uD558\uC138\uC694. \uB098\uBA38\uC9C0\uB294
+      \uC608\uBE44\uB85C \uC720\uC9C0\uD569\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G48|amb_forest.wav|0
+    _purpose: "G48 / \uB358\uC804\xB7\uC131\uCC44 \uBC30\uACBD \uBD84\uC704\uAE30
+      / amb_forest.wav"
+    _id: 1
+    _type: 0
+    _clip: {fileID: 8300000, guid: 264827d08f8f65e4aa38f00ecc05adf9, type: 3}
+    _volume: 1
+    _note: "\uBC30\uACBD\uC74C \uD655\uBCF4. TitleBgm/PlayBgm\uC5D0 \uD558\uB098\uC529
+      \uBC30\uC815\uD55C \uD589\uB9CC \uB4F1\uB85D\uD558\uC138\uC694. \uB098\uBA38\uC9C0\uB294
+      \uC608\uBE44\uB85C \uC720\uC9C0\uD569\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 0
+    _selectionKey: G48|RPG3_PAD_DarkLoop01.wav|0
+    _purpose: "G48 / \uB358\uC804\xB7\uC131\uCC44 \uBC30\uACBD \uBD84\uC704\uAE30
+      / RPG3_PAD_DarkLoop01.wav"
+    _id: 0
+    _type: 0
+    _clip: {fileID: 8300000, guid: 42246fca2c00b3b469c13c26f7cd383d, type: 3}
+    _volume: 1
+    _note: "\uC0AC\uC6A9\uCC98 \uBBF8\uC9C0\uC815 \uC608\uBE44 \uBC30\uACBD\uC74C
+      \uD6C4\uBCF4\uC785\uB2C8\uB2E4. \uD604\uC7AC \uC52C BGM \uBC30\uC815\uC5D0\uC11C
+      \uC81C\uC678\uD569\uB2C8\uB2E4."
+    _requiresLoopController: 0
+    _isReserve: 1
+  - _register: 1
+    _selectionKey: G49|bonfire_loop_03.wav|316
+    _purpose: "G49 / \uD683\uBD88\xB7\uBD88 \uC7A5\uD310 \uC9C0\uC18D \uB8E8\uD504
+      / bonfire_loop_03.wav"
+    _id: 316
+    _type: 4
+    _clip: {fileID: 8300000, guid: 47e05636cf228554abb9ac1f423ee89f, type: 3}
+    _volume: 1
+    _note: "\uD654\uC5FC \uC7A5\uD310 \uC9C0\uC18D\uC74C\uC785\uB2C8\uB2E4. LoopSfx\uC640
+      FireTrapSound/SoundLoopPlayer\uB85C \uC791\uB3D9 \uC2DC\uC791\uACFC \uC911\uB2E8\uC744
+      \uCC98\uB9AC\uD569\uB2C8\uB2E4."
+    _requiresLoopController: 1
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G50|step1.wav|20
+    _purpose: "G50 / \uD50C\uB808\uC774\uC5B4 \uBC1C\uC18C\uB9AC (\uC784\uC2DC) /
+      step1.wav"
+    _id: 20
+    _type: 3
+    _clip: {fileID: 8300000, guid: 1a4223c02e973834ab870c438329430c, type: 3}
+    _volume: 1
+    _note: "JSON\uC758 soundId\uB85C \uBC30\uC815\uD588\uC2B5\uB2C8\uB2E4. \uC2E4\uC81C
+      \uD638\uCD9C/\uCD9C\uB825\uC740 \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  - _register: 1
+    _selectionKey: G51|step1.wav|21
+    _purpose: "G51 / \uB3D9\uB8CC \uBC1C\uC18C\uB9AC (\uC784\uC2DC) / step1.wav"
+    _id: 21
+    _type: 3
+    _clip: {fileID: 8300000, guid: 1a4223c02e973834ab870c438329430c, type: 3}
+    _volume: 1
+    _note: "JSON\uC758 soundId\uB85C \uBC30\uC815\uD588\uC2B5\uB2C8\uB2E4. \uC2E4\uC81C
+      \uD638\uCD9C/\uCD9C\uB825\uC740 \uBCC4\uB3C4\uB85C \uD655\uC778\uD558\uC138\uC694."
+    _requiresLoopController: 0
+    _isReserve: 0
+  _bindings:
+  - _target: {fileID: 11400000, guid: 9cd17b1bdfc309e4d874f05e05c27b58, type: 2}
+    _field: 0
+    _id: 110
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1
+  - _target: {fileID: 11400000, guid: 9cd17b1bdfc309e4d874f05e05c27b58, type: 2}
+    _field: 1
+    _id: 111
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1
+  - _target: {fileID: 11400000, guid: 65fc88d369a948e4dbd45915bed320f9, type: 2}
+    _field: 0
+    _id: 120
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1
+  - _target: {fileID: 11400000, guid: 65fc88d369a948e4dbd45915bed320f9, type: 2}
+    _field: 1
+    _id: 121
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1
+  - _target: {fileID: 11400000, guid: 6129acf0710e110428c981d0e305fdc4, type: 2}
+    _field: 0
+    _id: 112
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1
+  - _target: {fileID: 11400000, guid: 6129acf0710e110428c981d0e305fdc4, type: 2}
+    _field: 1
+    _id: 113
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1
+  - _target: {fileID: 223247602650339157, guid: d65bd70c52bac0b42a28a962323edae2, type: 3}
+    _field: 2
+    _id: 114
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1
+  - _target: {fileID: 223247602650339157, guid: d65bd70c52bac0b42a28a962323edae2, type: 3}
+    _field: 3
+    _id: 210
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1
+  - _target: {fileID: 223247602650339157, guid: 621e0f8710bd35041a2ac133c645a64e, type: 3}
+    _field: 2
+    _id: 124
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1
+  - _target: {fileID: 223247602650339157, guid: 621e0f8710bd35041a2ac133c645a64e, type: 3}
+    _field: 3
+    _id: 211
+    _serviceConnected: 0
+    _allowSharedChange: 0
+    _isAutomatic: 1

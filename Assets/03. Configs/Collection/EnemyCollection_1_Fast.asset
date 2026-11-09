@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f653eaf127f2c4ea83b93f77bb34b2, type: 3}
+  m_Name: EnemyCollection_1_Fast
+  m_EditorClassIdentifier: 
+  _enemyId: EnemyCollection_1_Fast
+  _enemy: {fileID: 11400000, guid: 05a6d1f1ffa62424badcc5dd5a3a1e68, type: 2}
+  _kind: 0
+  _displayName: Fire Pig A
+  _representativeImage: {fileID: 0}
+  _feature: "\uD1B5\uD1B5\uD55C \uBAB8\uACFC \uC9E7\uC740 \uB2E4\uB9AC \uB54C\uBB38\uC5D0
+    \uB454\uD574 \uBCF4\uC774\uC9C0\uB9CC, \uC2E4\uC81C\uB85C\uB294 \uB2E4\uB978
+    \uBAAC\uC2A4\uD130\uB4E4\uC744 \uC55E\uC9C0\uB97C \uB9CC\uD07C \uC7AC\uBE60\uB974\uB2E4.
+    \uBA38\uB9AC\uC5D0 \uAE08\uC774 \uAC04 \uB3CC\uD310\uC744 \uC5B9\uACE0 \uC788\uC73C\uBA70,
+    \uC5F0\uC57D\uD55C \uBAB8\uACFC \uB2EC\uB9AC \uAC00\uAE4C\uC774 \uC788\uB294
+    \uC0C1\uB300\uC5D0\uAC8C\uB294 \uC720\uB09C\uD788 \uC9D1\uC694\uD55C \uBAA8\uC2B5\uC744
+    \uBCF4\uC778\uB2E4."
+  _attackDescription: "\uAC00\uAE4C\uC774\uC5D0 \uC0C1\uB300\uAC00 \uC788\uC73C\uBA74
+    \uB048\uC9C8\uAE30\uAC8C \uADFC\uC811 \uACF5\uACA9\uC744 \uBC18\uBCF5\uD55C\uB2E4.
+    \uC0C1\uB300\uAC00 \uACF5\uACA9 \uBC94\uC704\uB97C \uBC97\uC5B4\uB098\uC9C0 \uC54A\uB294
+    \uD55C \uC880\uCC98\uB7FC \uACF5\uACA9\uC744 \uBA48\uCD94\uC9C0 \uC54A\uB294\uB2E4."
+  _backgroundStory: "\uC791\uC740 \uBAB8\uC9D1\uACFC \uC775\uC0B4\uC2A4\uB7EC\uC6B4
+    \uC0DD\uAE40\uC0C8 \uB54C\uBB38\uC5D0 \uC27D\uAC8C \uC595\uBCF4\uAC8C \uB418\uB294
+    \uBAAC\uC2A4\uD130\uB2E4. \uADF8\uB7EC\uB098 \uC131\uCC44\uC758 \uBC29\uC5B4\uC790\uB4E4
+    \uC0AC\uC774\uC5D0\uC11C\uB294 \uC678\uBAA8\uB9CC \uBCF4\uACE0 \uC801\uC758 \uC704\uD5D8\uC131\uC744
+    \uD310\uB2E8\uD574\uC11C\uB294 \uC548 \uB41C\uB2E4\uB294 \uAD50\uD6C8\uC744 \uB0A8\uAE30\uB294
+    \uC874\uC7AC\uB85C \uC5EC\uACA8\uC9C4\uB2E4."
+  _rewardAmount: 50

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245d5aaca1d0e1c4aac137d6378bb39d, type: 3}
+  m_Name: Trap_Shock_Data
+  m_EditorClassIdentifier: 
+  _trapId: trap_shock
+  _prefab: {fileID: 1049302712978287354, guid: 02f033f11ac7cf44cb0ed76b3bb71278, type: 3}
+  _damage: 15
+  _attackInterval: 5
+  _detectionHeight: 1
+  _footprintSize: {x: 4, y: 4}
+  _placementCost: 200
+  _placementHeight: 0.2
+  _attackRange: 10

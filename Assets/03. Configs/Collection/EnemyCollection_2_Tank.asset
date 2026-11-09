@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f653eaf127f2c4ea83b93f77bb34b2, type: 3}
+  m_Name: EnemyCollection_2_Tank
+  m_EditorClassIdentifier: 
+  _enemyId: EnemyCollection_2_Tank
+  _enemy: {fileID: 11400000, guid: 6a43a97d4e5f15f499cdfb0d47d52d6b, type: 2}
+  _kind: 0
+  _displayName: Fire Golem A
+  _representativeImage: {fileID: 0}
+  _feature: "\uC721\uC911\uD55C \uBC14\uC704 \uBAB8\uCCB4\uB97C \uC774\uB04C\uACE0
+    \uB290\uB9BF\uB290\uB9BF \uC804\uC9C4\uD558\uC9C0\uB9CC, \uC6EC\uB9CC\uD55C \uCDA9\uACA9\uC5D0\uB294
+    \uC27D\uAC8C \uBC00\uB824\uB098\uC9C0 \uC54A\uB294\uB2E4. \uC880\uCC98\uB7FC
+    \uBB34\uB108\uC9C0\uC9C0 \uC54A\uB294 \uB2E8\uB2E8\uD55C \uBAB8\uACFC \uB048\uC9C8\uAE34
+    \uC804\uC9C4\uC774 \uAC00\uC7A5 \uD070 \uD2B9\uC9D5\uC774\uB2E4."
+  _attackDescription: "\uAC00\uAE4C\uC774 \uC811\uADFC\uD55C \uC0C1\uB300\uC5D0\uAC8C
+    \uCD5C\uB300 \uC138 \uCC28\uB840 \uADFC\uC811 \uACF5\uACA9\uC744 \uAC00\uD55C\uB2E4.
+    \uACF5\uACA9\uC744 \uB9C8\uCE58\uBA74 \uB354\uB294 \uCD94\uACA9\uD558\uC9C0 \uC54A\uACE0
+    \uBCF8\uB798\uC758 \uACBD\uB85C\uB85C \uB3CC\uC544\uAC04\uB2E4."
+  _backgroundStory: "\uB2E8\uB2E8\uD55C \uBAB8\uC73C\uB85C \uC624\uB7AB\uB3D9\uC548
+    \uACF5\uACA9\uC744 \uBC84\uD168 \uB0B4\uB294 \uAE4C\uB2E4\uB85C\uC6B4 \uBAAC\uC2A4\uD130\uB2E4.
+    \uC131\uCC44\uC758 \uBC29\uC5B4\uC790\uB4E4\uC5D0\uAC8C\uB294 \uB2E8\uC21C\uD788
+    \uAC15\uD55C \uACF5\uACA9\uC744 \uD37C\uBD93\uB294 \uAC83\uB9CC\uC73C\uB85C \uBAA8\uB4E0
+    \uC801\uC744 \uB9C9\uC544 \uB0BC \uC218\uB294 \uC5C6\uB2E4\uB294 \uC0AC\uC2E4\uC744
+    \uC77C\uAE68\uC6B0\uB294 \uC874\uC7AC\uB2E4."
+  _rewardAmount: 50

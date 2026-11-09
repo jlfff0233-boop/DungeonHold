@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3247ceca7979c904fa179bbfbda50178, type: 3}
+  m_Name: Upgrade_ArrowInterval
+  m_EditorClassIdentifier: 
+  _upgradeId: Upgrade_ArrowInterval
+  _installation: {fileID: 11400000, guid: 1463e3b745628914a83e9ecb2f109b3e, type: 2}
+  _levels:
+  - _price: 20
+    _intervalReduction: 0.1
+  - _price: 30
+    _intervalReduction: 0.2
+  - _price: 40
+    _intervalReduction: 0.3

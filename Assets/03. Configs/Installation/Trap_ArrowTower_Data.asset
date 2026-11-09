@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 245d5aaca1d0e1c4aac137d6378bb39d, type: 3}
+  m_Name: Trap_ArrowTower_Data
+  m_EditorClassIdentifier: 
+  _trapId: trap_arrow_tower
+  _prefab: {fileID: 1064, guid: 24e7f0c9c6a341e69d2124e98bac4a9c, type: 3}
+  _damage: 20
+  _attackInterval: 1
+  _detectionHeight: 1
+  _footprintSize: {x: 2, y: 2}
+  _placementCost: 100
+  _placementHeight: 3
+  _attackRange: 10

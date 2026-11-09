@@ -1,0 +1,11 @@
+MissionId,Type,DisplayName,Difficulties,PrerequisiteId,RewardAmount,MapId,Comparison,Count,KillCountId,TargetCount
+Mission_0_Stage1PerfectDefense,PerfectDefense,성채 진입로에서 적을 한 명도 통과시키지 않고 클리어,Easy|Normal|Hard,,100,stage_1,,,,
+Mission_1_Stage2PerfectDefense,PerfectDefense,분기형 지하 회랑에서 방어 목표가 피해를 받지 않고 클리어,Easy|Normal|Hard,,100,stage_2,,,,
+Mission_2_Stage3PerfectDefense,PerfectDefense,최후의 요새에서 적 통과와 방어 목표 피해 없이 클리어,Easy|Normal|Hard,,100,stage_3,,,,
+Mission_3_ClearWithoutItem,ItemUse,아이템을 사용하지 않고 클리어,Easy|Normal|Hard,,100,,Exactly,0,,
+Mission_4_ClearWithoutCompanion,CompanionParticipation,동료를 전투에 참여시키지 않고 클리어,Easy|Normal|Hard,,150,,Exactly,0,,
+Mission_5_BasicKill30,Kill,기본형 적 누적 30마리 처치,Easy|Normal|Hard,,100,,,,MissionKillCount_0_Basic,30
+Mission_6_BasicKill100,Kill,기본형 적 누적 100마리 처치,Easy|Normal|Hard,Mission_5_BasicKill30,200,,,,MissionKillCount_0_Basic,100
+Mission_7_TankKill20,Kill,탱커형 적 누적 20마리 처치,Easy|Normal|Hard,,150,,,,MissionKillCount_1_Tank,20
+Mission_8_ClearWithoutDeath,PlayerDeath,한 번도 사망하지 않고 클리어,Easy|Normal|Hard,,100,,Exactly,0,,
+Mission_9_HardClear,StageClear,어려움 난이도로 클리어,Hard,,200,,,,,

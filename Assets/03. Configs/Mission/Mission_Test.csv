@@ -1,0 +1,11 @@
+MissionId,Type,DisplayName,Difficulties,PrerequisiteId,RewardAmount,MapId,Comparison,Count,KillCountId,TargetCount
+mission_perfect_stage_1,PerfectDefense,성채 진입로 완전 방어,Easy|Normal|Hard,,100,stage_1,,,,
+mission_perfect_stage_2,PerfectDefense,지하 회랑 완전 방어,Easy|Normal|Hard,,100,stage_2,,,,
+mission_perfect_stage_3,PerfectDefense,최후의 요새 완전 방어,Easy|Normal|Hard,,100,stage_3,,,,
+mission_no_item,ItemUse,무소모품,Easy|Normal|Hard,,100,,Exactly,0,,
+mission_no_companion,CompanionParticipation,무동료,Easy|Normal|Hard,,150,,Exactly,0,,
+mission_basic_kill_1,Kill,특정 적 처치 I,Easy|Normal|Hard,,100,,,,kill_basic_all,30
+mission_basic_kill_2,Kill,특정 적 처치 II,Easy|Normal|Hard,mission_basic_kill_1,200,,,,kill_basic_all,100
+mission_tank_kill,Kill,탱커 사냥,Easy|Normal|Hard,,150,,,,kill_tank_all,20
+mission_no_death,PlayerDeath,무사망,Easy|Normal|Hard,,100,,Exactly,0,,
+mission_hard_clear,StageClear,어려움 정복,Hard,,200,,,,,

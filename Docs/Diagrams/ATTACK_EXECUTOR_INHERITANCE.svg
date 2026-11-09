@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="640" viewBox="0 0 1100 640" role="img" aria-labelledby="title desc">
+  <title id="title">공격 실행자 상속 관계</title>
+  <desc id="desc">주요 공격 실행자 상속 관계입니다. AttackExecutor에서 AreaAttackExecutor, ProjectileAttackExecutor, SkillExecutor로 상속됩니다. SkillExecutor에서 검 스킬, 활 스킬과 궁극기, 스태프 스킬과 궁극기 실행자로 상속됩니다. 모든 선은 부모 박스 오른쪽 중앙에서 출발합니다.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 Z" fill="#35a3c9"/>
+    </marker>
+    <style>
+      .node { fill: #24282b; stroke: #35a3c9; stroke-width: 1.4; }
+      .edge { fill: none; stroke: #35a3c9; stroke-width: 1.6; marker-end: url(#arrow); }
+      text { fill: #eeeeee; font-family: 'Malgun Gothic', sans-serif; font-size: 15px; text-anchor: middle; }
+    </style>
+  </defs>
+  <path class="edge" d="M 240 170 H 285 V 50 H 340"/>
+  <path class="edge" d="M 240 170 H 340"/>
+  <path class="edge" d="M 240 170 H 285 V 290 H 340"/>
+  <path class="edge" d="M 630 290 H 680 V 190 H 730"/>
+  <path class="edge" d="M 630 290 H 730"/>
+  <path class="edge" d="M 630 290 H 680 V 390 H 730"/>
+  <path class="edge" d="M 630 290 H 680 V 490 H 730"/>
+  <path class="edge" d="M 630 290 H 680 V 590 H 730"/>
+  <rect class="node" x="10" y="140" width="230" height="60"/>
+  <text x="125" y="165">AttackExecutor</text>
+  <text x="125" y="187">공통 실행 계약</text>
+  <rect class="node" x="340" y="20" width="290" height="60"/>
+  <text x="485" y="45">AreaAttackExecutor</text>
+  <text x="485" y="67">범위 피해</text>
+  <rect class="node" x="340" y="140" width="290" height="60"/>
+  <text x="485" y="165">ProjectileAttackExecutor</text>
+  <text x="485" y="187">투사체 생성</text>
+  <rect class="node" x="340" y="260" width="290" height="60"/>
+  <text x="485" y="285">SkillExecutor</text>
+  <text x="485" y="307">스킬 전용 준비 계약</text>
+  <rect class="node" x="730" y="160" width="350" height="60"/>
+  <text x="905" y="185">SwordSkillExecutor</text>
+  <text x="905" y="207">검 피해·넉백</text>
+  <rect class="node" x="730" y="260" width="350" height="60"/>
+  <text x="905" y="285">BowSkillExecutor</text>
+  <text x="905" y="307">관통 화살</text>
+  <rect class="node" x="730" y="360" width="350" height="60"/>
+  <text x="905" y="385">BowUltimateExecutor</text>
+  <text x="905" y="407">화살비 생성</text>
+  <rect class="node" x="730" y="460" width="350" height="60"/>
+  <text x="905" y="485">StaffSkillExecutor</text>
+  <text x="905" y="507">강화 마법탄</text>
+  <rect class="node" x="730" y="560" width="350" height="60"/>
+  <text x="905" y="585">StaffUltimateExecutor</text>
+  <text x="905" y="607">불기둥 생성</text>
+</svg>

@@ -1,0 +1,3 @@
+KillCountId,EnemyAssetPath,MapId
+MissionKillCount_0_Basic,Assets/03. Configs/Combat/Enemy/Enemy_Basic/Enemy_Basic_Data.asset,
+MissionKillCount_1_Tank,Assets/03. Configs/Combat/Enemy/Enemy_Tank/Enemy_Tank_Data.asset,

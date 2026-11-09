@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c0402df8c4f07540a44657c08bc8e6b, type: 3}
+  m_Name: Projectile_2_Staff
+  m_EditorClassIdentifier: 
+  _prefab: {fileID: 4187884380371582129, guid: a96f2a7ac629edf46b70da2f62347c2b, type: 3}
+  _speed: 20
+  _maxDistance: 30
+  _collisionRadius: 0.05
+  _collisionMask:
+    serializedVersion: 2
+    m_Bits: 6400
+  _launchSound: 120
+  _impactSound: 121
+  _launchVfx: {fileID: 0}
+  _flightVfx: {fileID: 2825831354488611350, guid: 8278cf08bb67f0e4188eece5cf9c5493, type: 3}
+  _impactVfx: {fileID: 0}

@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f653eaf127f2c4ea83b93f77bb34b2, type: 3}
+  m_Name: EnemyCollection_3_Flying
+  m_EditorClassIdentifier: 
+  _enemyId: EnemyCollection_3_Flying
+  _enemy: {fileID: 11400000, guid: ce019ef0685a1834da8365300d8725b2, type: 2}
+  _kind: 0
+  _displayName: Cute Butterfly A
+  _representativeImage: {fileID: 0}
+  _feature: "\uAE08\uBE5B \uB0A0\uAC1C\uB97C \uD3BC\uCE58\uACE0 \uB0A0\uC544\uB2E4\uB2C8\uB294
+    \uBAA8\uC2B5\uC740 \uC5EC\uB290 \uB098\uBE44\uC640 \uB2E4\uB974\uC9C0 \uC54A\uC9C0\uB9CC,
+    \uC9C0\uC0C1\uC758 \uD568\uC815\uC5D0\uB294 \uC544\uB791\uACF3\uD558\uC9C0 \uC54A\uB294\uB2E4.
+    \uB204\uAD70\uAC00 \uAC00\uAE4C\uC774 \uB2E4\uAC00\uC640\uB3C4 \uB9DE\uC11C \uC2F8\uC6B0\uC9C0
+    \uC54A\uACE0 \uC624\uC9C1 \uC815\uD574\uC9C4 \uBAA9\uC801\uC9C0\uB9CC\uC744 \uD5A5\uD55C\uB2E4."
+  _attackDescription: "\uD50C\uB808\uC774\uC5B4\uAC00 \uAC00\uAE4C\uC774 \uC811\uADFC\uD558\uB354\uB77C\uB3C4
+    \uACF5\uACA9\uD558\uAC70\uB098 \uBC18\uACA9\uD558\uC9C0 \uC54A\uB294\uB2E4. \uC8FC\uBCC0\uC758
+    \uC801\uC5D0\uAC8C \uAD00\uC2EC\uC744 \uB450\uC9C0 \uC54A\uACE0 \uC815\uD574\uC9C4
+    \uBAA9\uC801\uC9C0\uB97C \uD5A5\uD574 \uB0A0\uC544\uAC04\uB2E4."
+  _backgroundStory: "\uD654\uB824\uD558\uACE0 \uC628\uC21C\uD574 \uBCF4\uC774\uB294
+    \uBAA8\uC2B5 \uD0D3\uC5D0 \uBAAC\uC2A4\uD130\uB77C\uACE0\uB294 \uC0DD\uAC01\uD558\uAE30
+    \uC5B4\uB824\uC6B4 \uC874\uC7AC\uB2E4. \uADF8\uB7EC\uB098 \uC131\uCC44\uC758
+    \uBC29\uC5B4\uC790\uB4E4\uC5D0\uAC8C\uB294 \uC9C1\uC811 \uC2F8\uC6B0\uC9C0 \uC54A\uB294
+    \uC801\uC774\uB77C\uB3C4 \uCDA9\uBD84\uD788 \uC704\uD5D8\uD560 \uC218 \uC788\uC74C\uC744
+    \uBCF4\uC5EC \uC8FC\uB294 \uC0AC\uB840\uB85C \uC54C\uB824\uC838 \uC788\uB2E4."
+  _rewardAmount: 50

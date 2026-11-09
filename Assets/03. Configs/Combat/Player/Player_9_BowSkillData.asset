@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba9c3de49b4a1564c9074fb4aa202e31, type: 3}
+  m_Name: Player_9_BowSkillData
+  m_EditorClassIdentifier: 
+  _attackData: {fileID: 11400000, guid: bb329af498272af4abd31ed8ea6e138c, type: 2}
+  _energyCost: 30
+  _cooldown: 5
+  _projectileData: {fileID: 11400000, guid: 6129acf0710e110428c981d0e305fdc4, type: 2}
+  _maxHitCount: 3

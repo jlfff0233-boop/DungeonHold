@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a677e641e65ffc47a0acfdfbcd9a88e, type: 3}
+  m_Name: Enemy_Basic_Data
+  m_EditorClassIdentifier: 
+  _combatStatsData: {fileID: 11400000, guid: f20a1595463e1a242ad09898c013c0fb, type: 2}
+  _attackData: {fileID: 11400000, guid: 18d439cdf049ff544a106cd3cd1089a8, type: 2}
+  _moveSpeed: 3
+  _killReward: 20
+  _reactionRotationSpeed: 720
+  _reactionMode: 0
+  _reactionStartDistance: 2
+  _reactionEndDistance: 4
+  _reactionAttackCount: 1
+  _reactionCooldown: 3
+  _statusResistance: {fileID: 11400000, guid: c423e0eadf803324bbdc1edf753d54ed, type: 2}
+  _knockbackDistanceMultiplier: 1
+  _movementType: 0

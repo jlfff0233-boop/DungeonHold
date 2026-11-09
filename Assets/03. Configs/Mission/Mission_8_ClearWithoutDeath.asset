@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 195700116785a6a41882dc8587e8d9ed, type: 3}
+  m_Name: Mission_8_ClearWithoutDeath
+  m_EditorClassIdentifier: 
+  _missionId: Mission_8_ClearWithoutDeath
+  _displayName: "\uD55C \uBC88\uB3C4 \uC0AC\uB9DD\uD558\uC9C0 \uC54A\uACE0 \uD074\uB9AC\uC5B4"
+  _difficulties: 000000000100000002000000
+  _prerequisiteId: 
+  _rewardAmount: 100
+  _mapId: 
+  _condition:
+    _comparison: 0
+    _count: 0

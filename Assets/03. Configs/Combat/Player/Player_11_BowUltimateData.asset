@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a06a5e2d416b946b30e738602a30ad, type: 3}
+  m_Name: Player_11_BowUltimateData
+  m_EditorClassIdentifier: 
+  _attackData: {fileID: 11400000, guid: 1d8efc217b0f22646acd18f42e19d597, type: 2}
+  _energyCost: 100
+  _cooldown: 0
+  _areaPrefab: {fileID: 5782936122667805793, guid: d65bd70c52bac0b42a28a962323edae2, type: 3}
+  _maxCastDistance: 30
+  _tickCount: 6
+  _tickInterval: 0.5
