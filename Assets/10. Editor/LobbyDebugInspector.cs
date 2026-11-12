@@ -144,7 +144,7 @@ public class LobbyDebugInspector : Editor
     }
 
     /// <summary>
-    /// 로비 열기와 닫기
+    /// 로비 열기, 닫기와 정식 입장 요청
     /// </summary>
     /// <param name="flow">씬 흐름</param>
     void DrawLifetime ( SceneFlow flow )
@@ -171,6 +171,13 @@ public class LobbyDebugInspector : Editor
             {
                 bool isClosed = flow.TryCloseLobby( out string reason );
                 Report( $"로비 닫기: {isClosed} / {reason}" );
+            }
+            if ( GUILayout.Button( "정식 플레이 입장" ) == true )
+            {
+                bool isAccepted = flow.TryEnterStage( out string reason );
+                Report( isAccepted == true
+                    ? "정식 플레이 입장 요청 접수"
+                    : $"정식 플레이 입장 요청 거절: {reason ?? "현재 입장할 수 없습니다."}" );
             }
         }
     }

@@ -7,7 +7,7 @@ using UnityEngine;
 public class CompanionPlacementController : MonoBehaviour
 {
     [Header ( "----- 배치 포인트 -----" )]
-    [SerializeField] CompanionPlacementPoint [ ] _points;    //맵의 배치 포인트
+    [SerializeField] CompanionPlacementPoint [ ] _points = Array.Empty<CompanionPlacementPoint>( );    //맵의 배치 포인트
 
     CompanionHireController _hireController;    //고용 관리자
     Transform _hero;    //플레이어 루트
@@ -42,6 +42,16 @@ public class CompanionPlacementController : MonoBehaviour
 
         //영역 검사에 필요한 참조를 모두 받은 뒤 갱신 허용
         _isInitialized = true;
+    }
+
+    /// <summary>
+    /// 현재 맵의 배치 포인트 연결
+    /// </summary>
+    /// <param name="points">맵의 배치 포인트</param>
+    internal void SetPoints ( CompanionPlacementPoint [ ] points )
+    {
+        _points = points;
+        RefreshCurrentPoint ( );
     }
 
     private void Update ( )

@@ -13,6 +13,7 @@ namespace LJPlay
         [SerializeField] Hero _hero;		//히어로
         [SerializeField] InputHandler _inputHandler;		//인풋 핸들러
         [SerializeField] CameraFocus _cameraFocus;		//카메라 포커스
+        [SerializeField] Camera _playCamera;		//공용 플레이 카메라
 
         [Header ( "----- 재화 -----" )]
         [SerializeField] Currency _currency;		//실제 재화 모듈
@@ -129,6 +130,11 @@ namespace LJPlay
         /// 플레이어
         /// </summary>
         public Hero Hero => _hero;
+
+        /// <summary>
+        /// 공용 플레이 카메라
+        /// </summary>
+        public Camera PlayCamera => _playCamera;
 
         /// <summary>
         /// 재화 모듈
@@ -1297,6 +1303,22 @@ namespace LJPlay
             }
 
             return slot.TryExecute ( _quickSlotContext );
+        }
+
+        /// <summary>
+        /// 맵의 설치 프리뷰와 동료 배치점 교체
+        /// </summary>
+        /// <param name="buildPreview">설치 프리뷰</param>
+        /// <param name="placementPoints">동료 배치점</param>
+        internal void SetMapReferences (
+            BuildPreviewController buildPreview ,
+            CompanionPlacementPoint [ ] placementPoints )
+        {
+            ClearInstallationSelection ( );
+            _buildPreviewController = buildPreview;
+            _quickSlotContext = new QuickSlotContext (
+                _hireController , _itemUse , _buildPreviewController , _equipmentUnlock );
+            _placementController.SetPoints ( placementPoints );
         }
 
         /// <summary>

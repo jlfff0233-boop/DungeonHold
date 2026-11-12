@@ -120,6 +120,7 @@ public static class StageSelectionCsvImporter
                 LobbyStageInfo source = latest.Stages [ i ];
                 SerializedProperty stage = stages.GetArrayElementAtIndex( i );
                 stage.FindPropertyRelative( "_mapId" ).stringValue = source.MapId;
+                stage.FindPropertyRelative( "_scenePath" ).stringValue = source.ScenePath ?? string.Empty;
                 stage.FindPropertyRelative( "_displayName" ).stringValue = source.DisplayName;
                 stage.FindPropertyRelative( "_description" ).stringValue = source.Description;
                 stage.FindPropertyRelative( "_preview" ).objectReferenceValue = source.Preview;
@@ -171,7 +172,7 @@ public static class StageSelectionCsvImporter
         Dictionary<string, LobbyStageInfo> existing = new Dictionary<string, LobbyStageInfo>( StringComparer.Ordinal );
         foreach ( LobbyStageInfo stage in plan.Target.Stages )
         {
-            //기존 ID가 모호하면 이미지 보존 대상을 결정할 수 없음
+            //기존 ID가 모호하면 이미지와 씬 경로 보존 대상을 결정할 수 없음
             if ( stage == null || string.IsNullOrWhiteSpace( stage.MapId ) == true
                 || existing.TryAdd( stage.MapId, stage ) == false )
             {
@@ -204,7 +205,7 @@ public static class StageSelectionCsvImporter
             existing.TryGetValue( id, out LobbyStageInfo before );
             LobbyStageInfo after = new LobbyStageInfo( id,
                 row.Cells [ columns [ "DisplayName" ] ], row.Cells [ columns [ "Description" ] ],
-                before == null ? null : before.Preview, difficulties );
+                before?.Preview, difficulties, before?.ScenePath );
             plan.Stages.Add( after );
             imported.Add( id );
             plan.Changes.Add( before == null

@@ -35,12 +35,23 @@ public enum SceneFlowState
 /// </summary>
 public class SceneFlow
 {
+    /// <summary>
+    /// 비동기 씬 작업 단계
+    /// </summary>
+    enum LoadStep
+    {
+        Single,     //타이틀 또는 기존 단일 플레이 씬
+        PlayBase,   //공용 플레이 씬
+        UnloadMap,  //이전 맵 해제
+        Map         //대상 맵 로드
+    }
+
     string _titlePath; //타이틀 씬 경로
-    string _playPath; //플레이 씬 경로
+    string _playPath; //단일 씬 구성의 플레이 경로
+    string _playBasePath; //공용 플레이 씬 경로
     SoundManager _sound; //사운드 관리자
     StageEntry _entry = new StageEntry ( ); //입장 선택
     IReadOnlyList<LobbyStageInfo> _stages; //입장에 사용한 스테이지 목록
-    Func<string , MissionDifficulty , bool> _mapSupport; //실제 맵 준비 지원 조회
     SceneMove _move = new SceneMove ( ); //종료 대기
     LobbyController _lobby; //현재 로비
     PlayScene _play; //현재 플레이 연결부
@@ -48,7 +59,12 @@ public class SceneFlow
     PlayScene _endOwner; //종료 요청 연결 소유자
     IStageEndLink _endLink; //종료와 마지막 사건 전달 요청 대상
     SoundId _bgmId; //현재 씬의 배경음
-    AsyncOperation _operation; //실행 중 로드
+    AsyncOperation _operation; //실행 중 씬 로드/해제
+    LoadStep _loadStep; //현재 씬 작업
+    Scene _mapScene; //현재 로드된 맵 씬
+    int _readyToLoadFrame; //로딩 화면 표시를 요청한 프레임
+    int _loadStepCount; //이번 이동의 씬 작업 수
+    int _completedLoadSteps; //완료된 씬 작업 수
     SceneFlowState _state; //현재 처리 단계
     string _path; //요청한 이동 대상
     string _error; //마지막 실패 사유
@@ -87,9 +103,14 @@ public class SceneFlow
     public int MapRequestId => _mapRequestId;
 
     /// <summary>
-    /// 로드 진행률
+    /// 씬 로드와 플레이 준비를 포함한 이동 진행률
     /// </summary>
-    public float LoadProgress => _operation != null ? _operation.progress : 0f;
+    public float LoadProgress => GetLoadProgress ( );
+
+    /// <summary>
+    /// 공용 플레이 씬 사용 여부
+    /// </summary>
+    bool UsesPlayBase => string.IsNullOrWhiteSpace ( _playBasePath ) == false;
 
     /// <summary>
     /// 결과 화면의 새 백업/복원 요청 가능 여부
@@ -106,16 +127,16 @@ public class SceneFlow
     /// 씬 흐름 생성
     /// </summary>
     /// <param name="titlePath">타이틀 경로</param>
-    /// <param name="playPath">플레이 경로</param>
+    /// <param name="playPath">단일 씬 구성의 플레이 경로</param>
     /// <param name="sound">사운드 관리자</param>
-    /// <param name="mapSupport">맵과 난이도의 준비 지원 조회</param>
+    /// <param name="playBasePath">공용 플레이 씬의 Scene List 경로</param>
     public SceneFlow ( string titlePath , string playPath , SoundManager sound ,
-        Func<string , MissionDifficulty , bool> mapSupport = null )
+        string playBasePath = null )
     {
         _titlePath = titlePath;
         _playPath = playPath;
+        _playBasePath = playBasePath;
         _sound = sound;
-        _mapSupport = mapSupport;
         _sound.OnReadyChanged += HandleSoundReady;
         _move.OnChanged += HandleMoveChanged;
     }
@@ -136,11 +157,12 @@ public class SceneFlow
             && _move.TryBeginLoad ( out string path ) == true )
         {
             _path = path;
-            _state = SceneFlowState.ReadyToLoad;
+            SetState ( SceneFlowState.ReadyToLoad );
         }
 
-        //종료 알림 스택 밖에서만 씬 로드 실행
-        if ( _state == SceneFlowState.ReadyToLoad && _operation == null )
+        //종료 알림 스택 밖에서 로딩 화면 표시 프레임을 확보한 뒤 씬 로드
+        if ( _state == SceneFlowState.ReadyToLoad && _operation == null
+            && Time.frameCount != _readyToLoadFrame )
             BeginLoad ( );
     }
 
@@ -269,7 +291,14 @@ public class SceneFlow
         if ( _state != SceneFlowState.Lobby || _operation != null )
             return false;
 
-        if ( CanLoad ( _playPath , out reason ) == false )
+        IReadOnlyList<LobbyStageInfo> stages = _lobby.Stages;
+        string mapId = _lobby.SelectedStage?.MapId;
+        MissionDifficulty difficulty = _lobby.SelectedDifficulty;
+        if ( TryResolveStagePath ( stages , mapId , out string path , out reason ) == false )
+            return false;
+
+        if ( UsesPlayBase == true
+            && TryCheckMapSupport ( stages , mapId , difficulty , out reason ) == false )
             return false;
 
         //로비 저장 알림 중에도 중복 이동 요청 차단
@@ -279,6 +308,16 @@ public class SceneFlow
         if ( result != EntryPreparationResult.Success )
         {
             reason = $"입장 준비 실패: {result}";
+            _error = reason;
+            SetState ( SceneFlowState.Lobby );
+            return false;
+        }
+
+        //저장 알림 중 선택이 바뀌면 앞서 확인한 맵 씬으로 이동하지 않음
+        if ( UsesPlayBase == true && ( entry.MapId != mapId || entry.Difficulty != difficulty ) )
+        {
+            reason = "입장 준비 중 스테이지 선택이 변경됐습니다.";
+            _lobby.ResumeRequests ( );
             _error = reason;
             SetState ( SceneFlowState.Lobby );
             return false;
@@ -296,8 +335,8 @@ public class SceneFlow
         }
 
         //로비 해제 후에도 순서 조회에 필요한 설정 목록 유지
-        _stages = _lobby.Stages;
-        _path = _playPath;
+        _stages = stages;
+        _path = path;
         _error = null;
         SetState ( SceneFlowState.ReadyToLoad );
 
@@ -349,20 +388,113 @@ public class SceneFlow
     #region ----- 플레이 준비 -----
 
     /// <summary>
+    /// 현재 플레이와 연결된 맵 씬 조회
+    /// </summary>
+    /// <param name="play">현재 플레이 연결부</param>
+    /// <param name="mapScene">현재 맵 씬</param>
+    /// <returns>플레이와 맵 참조 조회 여부</returns>
+    public bool TryGetPlayContext ( out PlayScene play , out Scene mapScene )
+    {
+        play = null;
+        mapScene = default;
+
+        if ( _state == SceneFlowState.Loading || _state == SceneFlowState.LoadFailed
+            || _state == SceneFlowState.Closed || _play == null || _play.IsInitialized == false
+            || _mapScene.IsValid ( ) == false || _mapScene.isLoaded == false )
+            return false;
+
+        play = _play;
+        mapScene = _mapScene;
+        return true;
+    }
+
+    /// <summary>
+    /// 현재 맵의 준비 요청과 공용 플레이 참조 조회
+    /// </summary>
+    /// <param name="mapScene">준비를 요청하는 맵 씬</param>
+    /// <param name="play">공용 플레이 연결부</param>
+    /// <param name="entry">준비할 입장 선택</param>
+    /// <param name="requestId">맵 준비 요청 번호</param>
+    /// <returns>현재 맵의 준비 요청 조회 성공 여부</returns>
+    public bool TryGetMapPreparation ( Scene mapScene , out PlayScene play ,
+        out StageEntrySelection entry , out int requestId )
+    {
+        play = null;
+        entry = default;
+        requestId = 0;
+
+        StageEntrySelection? pending = _entry.Pending;
+        if ( _state != SceneFlowState.PreparingMap || pending.HasValue == false
+            || TryGetPlayContext ( out PlayScene currentPlay , out Scene currentMap ) == false
+            || mapScene != currentMap )
+            return false;
+
+        play = currentPlay;
+        entry = pending.Value;
+        requestId = _mapRequestId;
+        return true;
+    }
+
+    /// <summary>
+    /// 현재 맵의 설치 프리뷰와 동료 배치점 연결
+    /// </summary>
+    /// <param name="mapScene">준비 중인 맵 씬</param>
+    /// <param name="requestId">준비 요청 번호</param>
+    /// <param name="buildPreview">설치 프리뷰, 없으면 null</param>
+    /// <param name="placementPoints">동료 배치점, 없으면 빈 배열</param>
+    /// <returns>참조 연결 여부</returns>
+    public bool TryBindMapReferences ( Scene mapScene , int requestId ,
+        BuildPreviewController buildPreview , CompanionPlacementPoint [ ] placementPoints )
+    {
+        if ( requestId != _mapRequestId
+            || TryGetMapPreparation ( mapScene , out PlayScene play , out _ , out _ ) == false )
+            return false;
+
+        if ( placementPoints == null
+            || ( buildPreview != null && buildPreview.gameObject.scene != mapScene ) )
+            return false;
+
+        foreach ( CompanionPlacementPoint point in placementPoints )
+        {
+            if ( point == null || point.gameObject.scene != mapScene )
+                return false;
+        }
+
+        play.SetMapReferences ( buildPreview , placementPoints );
+        return true;
+    }
+
+    /// <summary>
     /// 플레이 도착 연결
     /// </summary>
     /// <param name="play">플레이 연결부</param>
-    /// <returns>초기화 여부</returns>
+    /// <returns>연결 여부</returns>
     public bool TryAttachPlay ( PlayScene play )
     {
+        if ( play == null )
+            return false;
+
+        //로드 완료 처리와 공용 PlayScene.Start가 같은 객체를 연결할 수 있음
+        if ( UsesPlayBase == true && _play == play )
+            return true;
+
         if ( _state != SceneFlowState.Loading
-            || _path != _playPath
+            || _path == _titlePath
+            || ( UsesPlayBase == false && _path != _playPath )
             || _entry.Pending.HasValue == false )
             return false;
 
+        if ( UsesPlayBase == true )
+        {
+            if ( _play != null || play.gameObject.scene.path != _playBasePath )
+                return false;
+
+            _play = play;
+            return true;
+        }
+
         _play = play;
-        _move.Dispose ( );
-        _stageId = 0;
+        _mapScene = play.gameObject.scene;
         return InitPlay ( );
     }
 
@@ -381,8 +513,12 @@ public class SceneFlow
     /// <returns>성공 여부</returns>
     bool InitPlay ( )
     {
+        _move.Dispose ( );
+        _stageId = 0;
         _state = SceneFlowState.InitializingPlay;
-        if ( _play.Init ( PlayInitMode.Lobby ) == false )
+        //맵 교체에서는 공용 플레이 진행과 도전 결과를 보유한 세션 유지
+        if ( ( UsesPlayBase == false || _play.IsInitialized == false )
+            && _play.Init ( PlayInitMode.Lobby ) == false )
         {
             _error = _play.InitError;
             SetState ( SceneFlowState.InitFailed );
@@ -702,7 +838,20 @@ public class SceneFlow
     /// <returns>입장 가능 여부</returns>
     public bool TryGetNextStage ( out StageEntrySelection entry , out string reason )
     {
+        return TryGetNextStage ( out entry , out _ , out reason );
+    }
+
+    /// <summary>
+    /// 다음 입장 선택과 대상 씬 경로 조회
+    /// </summary>
+    /// <param name="entry">다음 입장 선택</param>
+    /// <param name="path">이동할 씬 경로</param>
+    /// <param name="reason">이동 불가 사유</param>
+    /// <returns>입장 가능 여부</returns>
+    bool TryGetNextStage ( out StageEntrySelection entry , out string path , out string reason )
+    {
         entry = default;
+        path = null;
 
         if ( _state != SceneFlowState.Playing || _operation != null )
         {
@@ -732,25 +881,11 @@ public class SceneFlow
 
             LobbyStageInfo next = _stages [ i + 1 ];
 
-            if ( next.Supports ( current.Difficulty ) == false )
-            {
-                reason = "다음 스테이지에서 현재 난이도를 지원하지 않습니다.";
+            if ( TryCheckMapSupport (
+                _stages , next.MapId , current.Difficulty , out reason ) == false )
                 return false;
-            }
 
-            if ( _mapSupport == null )
-            {
-                reason = "맵 준비 지원 조회가 연결되지 않았습니다.";
-                return false;
-            }
-
-            if ( _mapSupport ( next.MapId , current.Difficulty ) == false )
-            {
-                reason = "다음 스테이지를 현재 난이도로 준비할 수 없습니다.";
-                return false;
-            }
-
-            if ( CanLoad ( _playPath , out reason ) == false )
+            if ( TryResolveStagePath ( _stages , next.MapId , out path , out reason ) == false )
                 return false;
 
             entry = new StageEntrySelection ( next.MapId , current.Difficulty , current.WeaponType );
@@ -768,12 +903,12 @@ public class SceneFlow
     /// <returns>요청 접수 여부</returns>
     public bool TryGoToNextStage ( out string reason )
     {
-        if ( TryGetNextStage ( out StageEntrySelection entry , out reason ) == false )
+        if ( TryGetNextStage ( out StageEntrySelection entry , out string path , out reason ) == false )
             return false;
 
         //새 도전 시작에 성공할 때까지 현재 선택 유지
         _entry.Prepare ( entry );
-        _path = _playPath;
+        _path = path;
         _shouldOpenLobby = false;
         _error = null;
 
@@ -810,24 +945,47 @@ public class SceneFlow
     bool TryLeavePlay ( bool isRetry , out string reason )
     {
         reason = null;
+
+        if ( UsesPlayBase == true && isRetry == false
+            && _state == SceneFlowState.LoadFailed && _path != _titlePath )
+        {
+            //공용 씬 도착 이후에는 기존 타이틀이 제거됐으므로 새로 로드
+            if ( _lobby != null )
+                return TryRestoreLobby ( out reason );
+
+            if ( CanLoad ( _titlePath , out reason ) == false )
+                return false;
+
+            _path = _titlePath;
+            _shouldOpenLobby = true;
+            _error = null;
+            SetState ( SceneFlowState.ReadyToLoad );
+            return true;
+        }
+
         if ( _operation != null || ( _state != SceneFlowState.Playing
             && _state != SceneFlowState.PreparingMap && _state != SceneFlowState.MapFailed
             && _state != SceneFlowState.StartFailed
             && _state != SceneFlowState.InitFailed ) )
             return false;
 
-        if ( isRetry == true
-            && _entry.Current.HasValue == false
-            && _entry.Pending.HasValue == false )
+        string path = _titlePath;
+        if ( isRetry == true )
         {
-            reason = "재진입할 입장 선택이 없습니다.";
-            return false;
+            StageEntrySelection? retry = _entry.Pending ?? _entry.Current;
+            if ( retry.HasValue == false )
+            {
+                reason = "재진입할 입장 선택이 없습니다.";
+                return false;
+            }
+
+            if ( TryResolveStagePath ( _stages , retry.Value.MapId , out path , out reason ) == false )
+                return false;
         }
 
-        string path = isRetry == true ? _playPath : _titlePath;
         if ( _state == SceneFlowState.InitFailed )
         {
-            if ( CanLoad ( path , out reason ) == false )
+            if ( isRetry == false && CanLoad ( path , out reason ) == false )
                 return false;
 
             //초기화 실패 시 부분 연결은 이미 해제된 상태
@@ -953,6 +1111,32 @@ public class SceneFlow
     #region ----- 씬 로드 -----
 
     /// <summary>
+    /// 현재 이동 진행률 계산
+    /// </summary>
+    /// <returns>0~1 범위의 진행률</returns>
+    float GetLoadProgress ( )
+    {
+        if ( _state == SceneFlowState.ReadyToLoad )
+            return 0f;
+
+        if ( _state == SceneFlowState.Playing
+            || _state == SceneFlowState.Lobby )
+            return 1f;
+
+        if ( _loadStepCount == 0 )
+            return 0f;
+
+        float operationProgress = _operation != null
+            ? _operation.progress : 0f;
+
+        //씬 작업은 90%까지 표시하고 실제 준비 완료 후 100% 반환
+        float progress = ( _completedLoadSteps + operationProgress )
+            / _loadStepCount;
+
+        return Mathf.Clamp01 ( progress ) * 0.9f;
+    }
+
+    /// <summary>
     /// 로드 시작 재시도
     /// </summary>
     /// <returns>접수 여부</returns>
@@ -1011,6 +1195,17 @@ public class SceneFlow
     /// </summary>
     void BeginLoad ( )
     {
+        bool hasLoadedMap = _mapScene.IsValid ( ) && _mapScene.isLoaded;
+        _completedLoadSteps = 0;
+
+        //타이틀·단일 씬은 1회, 공용 씬 입장·맵 교체는 2회
+        if ( UsesPlayBase == false || _path == _titlePath )
+            _loadStepCount = 1;
+        else if ( _play == null || hasLoadedMap == true )
+            _loadStepCount = 2;
+        else
+            _loadStepCount = 1;
+
         _state = SceneFlowState.Loading;
         _sound.TrySetGameplayPaused ( false , out _ );
         _sound.StopSfx ( );
@@ -1018,12 +1213,52 @@ public class SceneFlow
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
 
-        //Unity의 로드 접수 실패만 여기서 처리
+        //이전 맵을 내리기 전에 HUD가 기존 참조를 해제할 수 있도록 알림
+        OnChanged?.Invoke ( );
+
+        if ( UsesPlayBase == true && hasLoadedMap == true && _play != null && _play.IsInitialized == true )
+            _play.SetMapReferences ( null , Array.Empty<CompanionPlacementPoint> ( ) );
+
+        if ( _state == SceneFlowState.Closed )
+            return;
+
+        if ( UsesPlayBase == false || _path == _titlePath )
+        {
+            BeginSceneOperation ( LoadStep.Single , _path );
+            return;
+        }
+
+        if ( _play == null )
+        {
+            BeginSceneOperation ( LoadStep.PlayBase , _playBasePath );
+            return;
+        }
+
+        if ( hasLoadedMap == true )
+        {
+            BeginSceneOperation ( LoadStep.UnloadMap , _mapScene.path );
+            return;
+        }
+
+        BeginSceneOperation ( LoadStep.Map , _path );
+    }
+
+    /// <summary>
+    /// 씬 로드 또는 해제 요청 접수
+    /// </summary>
+    /// <param name="step">실행할 씬 작업</param>
+    /// <param name="path">대상 씬 경로</param>
+    void BeginSceneOperation ( LoadStep step , string path )
+    {
         try
         {
-            _operation = SceneManager.LoadSceneAsync ( _path , LoadSceneMode.Single );
+            if ( step == LoadStep.UnloadMap )
+                _operation = SceneManager.UnloadSceneAsync ( _mapScene );
+            else
+                _operation = SceneManager.LoadSceneAsync ( path ,
+                    step == LoadStep.Map ? LoadSceneMode.Additive : LoadSceneMode.Single );
         }
-        catch ( UnityException exception )
+        catch ( Exception exception ) when ( exception is UnityException || exception is ArgumentException )
         {
             FailLoad ( exception.Message );
             return;
@@ -1031,10 +1266,14 @@ public class SceneFlow
 
         if ( _operation == null )
         {
-            FailLoad ( "씬 로드를 시작하지 못했습니다." );
+            FailLoad ( $"씬 작업을 시작하지 못했습니다. {path}" );
             return;
         }
 
+        if ( step == LoadStep.UnloadMap )
+            UnbindEndLink ( _endOwner , _endLink );
+
+        _loadStep = step;
         _operation.completed += HandleLoaded;
         OnChanged?.Invoke ( );
     }
@@ -1051,15 +1290,162 @@ public class SceneFlow
     }
 
     /// <summary>
-    /// 로드 완료 수신
+    /// 씬 작업 완료 후 다음 단계 진행
     /// </summary>
     /// <param name="operation">완료 요청</param>
     void HandleLoaded ( AsyncOperation operation )
     {
         operation.completed -= HandleLoaded;
+        if ( operation != _operation )
+            return;
+
+        _completedLoadSteps++;
         _operation = null;
-        //로드 완료만으로 맵 준비나 도전 시작을 완료 처리하지 않음
-        OnChanged?.Invoke ( );
+
+        switch ( _loadStep )
+        {
+            case LoadStep.PlayBase:
+                if ( TryAttachPlayBase ( ) == false )
+                {
+                    //Start에서 일부 연결됐어도 실패한 공용 씬은 다음 로드에서 다시 준비
+                    _play = null;
+                    FailLoad ( "공용 플레이 씬에 활성 PlayScene 루트 하나를 연결하세요." );
+                    return;
+                }
+
+                BeginSceneOperation ( LoadStep.Map , _path );
+                return;
+            case LoadStep.UnloadMap:
+                if ( _mapScene.IsValid ( ) == true && _mapScene.isLoaded == true )
+                {
+                    FailLoad ( "이전 맵 씬을 내리지 못했습니다." );
+                    return;
+                }
+
+                _mapScene = default;
+                BeginSceneOperation ( LoadStep.Map , _path );
+                return;
+            case LoadStep.Map:
+                _mapScene = SceneManager.GetSceneByPath ( _path );
+                if ( _mapScene.IsValid ( ) == false || _mapScene.isLoaded == false
+                    || SceneManager.SetActiveScene ( _mapScene ) == false )
+                {
+                    FailLoad ( $"맵 씬을 활성화하지 못했습니다. {_path}" );
+                    return;
+                }
+
+                if ( _play == null || _play.isActiveAndEnabled == false )
+                {
+                    FailLoad ( "공용 플레이 씬 연결이 해제됐습니다." );
+                    return;
+                }
+
+                //맵 활성화 이후에만 새 맵 준비 요청 발행
+                InitPlay ( );
+                return;
+            default:
+                OnChanged?.Invoke ( );
+                return;
+        }
+    }
+
+    /// <summary>
+    /// 로드 완료와 Start 순서에 의존하지 않고 공용 플레이 씬 연결
+    /// </summary>
+    /// <returns>활성 플레이 루트 연결 여부</returns>
+    bool TryAttachPlayBase ( )
+    {
+        Scene playBase = SceneManager.GetSceneByPath ( _playBasePath );
+        if ( playBase.IsValid ( ) == false || playBase.isLoaded == false )
+            return false;
+
+        PlayScene play = null;
+        foreach ( GameObject root in playBase.GetRootGameObjects ( ) )
+        {
+            if ( root.TryGetComponent ( out PlayScene candidate ) == false
+                || candidate.isActiveAndEnabled == false )
+                continue;
+
+            if ( play != null )
+                return false;
+
+            play = candidate;
+        }
+
+        return TryAttachPlay ( play );
+    }
+
+    /// <summary>
+    /// 설정 목록에서 맵과 난이도 지원 확인
+    /// </summary>
+    /// <param name="stages">입장에 사용할 스테이지 목록</param>
+    /// <param name="mapId">입장할 맵 ID</param>
+    /// <param name="difficulty">입장할 난이도</param>
+    /// <param name="reason">입장 불가 사유</param>
+    /// <returns>선택한 입장 지원 여부</returns>
+    bool TryCheckMapSupport (
+        IReadOnlyList<LobbyStageInfo> stages ,
+        string mapId ,
+        MissionDifficulty difficulty ,
+        out string reason )
+    {
+        reason = null;
+        foreach ( LobbyStageInfo stage in stages )
+        {
+            if ( stage.MapId != mapId )
+                continue;
+
+            if ( stage.Supports ( difficulty ) == false )
+            {
+                reason = $"선택한 스테이지에서 해당 난이도를 지원하지 않습니다. {mapId} / {difficulty}";
+                return false;
+            }
+
+            return true;
+        }
+
+        reason = $"스테이지 목록에 맵이 없습니다. {mapId}";
+        return false;
+    }
+
+    /// <summary>
+    /// 이동할 맵 씬을 찾고 로드 가능 여부 확인
+    /// </summary>
+    /// <param name="stages">씬 경로를 조회할 스테이지 목록</param>
+    /// <param name="mapId">이동할 맵 ID</param>
+    /// <param name="path">이동할 씬 경로</param>
+    /// <param name="reason">실패 사유</param>
+    /// <returns>대상 씬 로드 가능 여부</returns>
+    bool TryResolveStagePath ( IReadOnlyList<LobbyStageInfo> stages , string mapId ,
+        out string path , out string reason )
+    {
+        path = _playPath;
+        if ( UsesPlayBase == false )
+            return CanLoad ( path , out reason );
+
+        path = null;
+        foreach ( LobbyStageInfo stage in stages )
+        {
+            if ( stage.MapId != mapId )
+                continue;
+
+            path = stage.ScenePath;
+            break;
+        }
+
+        if ( string.IsNullOrWhiteSpace ( path ) == true )
+        {
+            reason = $"맵 씬 경로가 설정되지 않았습니다. {mapId}";
+            return false;
+        }
+
+        if ( path == _titlePath || path == _playBasePath || _playBasePath == _titlePath )
+        {
+            reason = "타이틀, 공용 플레이 씬, 맵 씬의 경로를 각각 지정하세요.";
+            return false;
+        }
+
+        return CanLoad ( _playBasePath , out reason ) && CanLoad ( path , out reason );
     }
 
     /// <summary>
@@ -1085,6 +1471,9 @@ public class SceneFlow
     /// <param name="state">다음 상태</param>
     void SetState ( SceneFlowState state )
     {
+        if ( state == SceneFlowState.ReadyToLoad )
+            _readyToLoadFrame = Time.frameCount;
+
         _state = state;
         OnChanged?.Invoke ( );
     }
@@ -1118,6 +1507,7 @@ public class SceneFlow
 
         _move.Dispose ( );
         _play = null;
+        _mapScene = default;
 
         //로드 외의 강제 제거는 새 저장이나 자동 복구 없이 중단
         if ( _state != SceneFlowState.Loading && _state != SceneFlowState.Closed )
@@ -1163,6 +1553,7 @@ public class SceneFlow
 
         _restoreNoticePending = false;
         _play = null;
+        _mapScene = default;
         _lobby = null;
         OnChanged = null;
         _endOwner = null;

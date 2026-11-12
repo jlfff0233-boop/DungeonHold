@@ -9,6 +9,7 @@ using UnityEngine;
 public class LobbyStageInfo
 {
     [SerializeField] string _mapId;                 //맵 ID
+    [SerializeField] string _scenePath;             //맵 씬의 Scene List 경로
     [SerializeField] string _displayName;           //표시 이름
     [SerializeField] string _description;           //맵 설명
     [SerializeField] Sprite _preview;               //미리보기
@@ -22,6 +23,11 @@ public class LobbyStageInfo
     /// 맵 ID
     /// </summary>
     public string MapId => _mapId;
+
+    /// <summary>
+    /// 맵 씬의 Scene List 경로
+    /// </summary>
+    public string ScenePath => _scenePath;
 
     /// <summary>
     /// 표시 이름
@@ -58,10 +64,12 @@ public class LobbyStageInfo
     /// <param name="description">설명</param>
     /// <param name="preview">보존할 이미지</param>
     /// <param name="difficulties">지원 난이도</param>
+    /// <param name="scenePath">보존할 맵 씬 경로</param>
     public LobbyStageInfo ( string mapId, string displayName, string description,
-        Sprite preview, MissionDifficulty [ ] difficulties )
+        Sprite preview, MissionDifficulty [ ] difficulties, string scenePath = null )
     {
         _mapId = mapId;
+        _scenePath = scenePath;
         _displayName = displayName;
         _description = description;
         _preview = preview;
