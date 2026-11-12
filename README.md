@@ -1,4 +1,4 @@
-# 🛡️ (팀)던전 홀드 · Dungeon Hold (26.11.12 업데이트)
+# 🛡️ (팀)던전 홀드 · Dungeon Hold (26.11.13 업데이트)
 
 > 플레이어가 직접 전투하고 동료·설치물을 운용해 몬스터의 던전 탈출을 저지하는 **3인칭 3D 액션 디펜스 게임**
 
@@ -16,9 +16,9 @@
 
 (+26.11.12) 공개본에는 PlayBase 맵 전환·공용 로딩의 코드 기반과 튜토리얼 모듈을 반영했습니다. 관련 씬·프리팹·튜토리얼 데이터의 구성은 팀 프로젝트에 있습니다.
 
-![콤보 처치 표시와 스킬·궁극기 준비 상태, 동료 2명과 소모품 보유 상태가 함께 보이는 Stage1 전투 화면](Docs/PortfolioMedia/dungeon-hold-stage1-hud-rich.png)
+![동료 2명과 함께 검 스킬로 적을 공격하는 Stage 1 전투 화면](Docs/PortfolioMedia/dungeon-hold-stage1-hud-rich.png)
 
-콤보 처치 표시와 스킬·궁극기 준비 상태, 동료 2명과 소모품 보유 상태가 함께 보이는 Stage1 전투 화면
+동료 2명과 함께 검 스킬로 적을 공격하는 Stage 1 전투 화면
 
 ![검 궁극기의 범위 타격](Docs/PortfolioMedia/dungeon-hold-swordUltimate.gif)
 
@@ -56,9 +56,9 @@
 
 처치로 얻은 스테이지 재화는 해당 도전의 동료·설치물 운용에, 영구 재화는 다음 도전을 위한 구매·강화에 사용합니다.
 
-![Stage1에서 적이 생성되고, 플레이어가 검 기본 공격을 실행하는 모습.](Docs/PortfolioMedia/dungeon-hold-stage1.gif)
+![Stage 1에서 동료와 함께 검 기본 공격과 스킬로 적을 막는 모습.](Docs/PortfolioMedia/dungeon-hold-stage1.gif)
 
-Stage1에서 적이 생성되고, 플레이어가 검 기본 공격을 실행하는 모습.
+Stage 1에서 동료와 함께 검 기본 공격과 스킬로 적을 막는 모습.
 
 ### 전체 플레이 흐름
 
